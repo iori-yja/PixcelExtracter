@@ -81,48 +81,48 @@ TEST2                        : 16        : output : 3.3-V LVTTL       :         
 TEST3                        : 17        : output : 3.3-V LVTTL       :         : 1         : Y              
 nData                        : 18        : output : 3.3-V LVTTL       :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 19        :        :                   :         : 1         :                
-PixPararegbg[11]             : 20        : output : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 20        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 21        :        :                   :         : 1         :                
 TMS                          : 22        : input  :                   :         : 1         :                
 TDI                          : 23        : input  :                   :         : 1         :                
 TCK                          : 24        : input  :                   :         : 1         :                
 TDO                          : 25        : output :                   :         : 1         :                
-PixPararegbg[10]             : 26        : output : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 26        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 27        :        :                   :         : 1         :                
-PixPararegbg[9]              : 28        : output : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 28        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 29        :        :                   :         : 1         :                
-PixPararegbg[8]              : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 30        :        :                   :         : 1         :                
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 32        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 33        :        :                   :         : 1         :                
-PixPararegbg[7]              : 34        : output : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 34        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 35        :        :                   :         : 1         :                
-PixPararegbg[6]              : 36        : output : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 36        :        :                   :         : 1         :                
 GNDINT                       : 37        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 38        :        :                   :         : 1         :                
 VCCINT                       : 39        : power  :                   : 2.5V/3.3V :           :                
-PixPararegbg[5]              : 40        : output : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 40        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 41        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 42        :        :                   :         : 1         :                
-PixPararegbg[4]              : 43        : output : 3.3-V LVTTL       :         : 1         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 44        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 43        :        :                   :         : 1         :                
+Serot                        : 44        : output : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
-PixPararegbg[3]              : 47        : output : 3.3-V LVTTL       :         : 1         : Y              
+Serck                        : 47        : input  : 3.3-V LVTTL       :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 48        :        :                   :         : 1         :                
-PixPararegbg[2]              : 49        : output : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 49        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 50        :        :                   :         : 1         :                
-PixPararegbg[1]              : 51        : output : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 51        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 52        :        :                   :         : 2         :                
-PixPararegbg[0]              : 53        : output : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 53        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 54        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 55        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 56        :        :                   :         : 2         :                
-Serck                        : 57        : input  : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 57        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 58        :        :                   :         : 2         :                
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 60        : gnd    :                   :         :           :                
-Serot                        : 61        : output : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 61        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 62        :        :                   :         : 2         :                
 VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 64        :        :                   :         : 2         :                

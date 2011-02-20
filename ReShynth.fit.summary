@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Jan 27 16:58:57 2011
+Fitter Status : Successful - Mon Feb 21 00:19:20 2011
 Quartus II Version : 10.0 Build 218 06/27/2010 SJ Web Edition
 Revision Name : ReShynth
 Top-level Entity Name : ReShynth
 Family : MAX II
 Device : EPM570T100C5
 Timing Models : Final
-Total logic elements : 96 / 570 ( 17 % )
-Total pins : 45 / 76 ( 59 % )
+Total logic elements : 72 / 570 ( 13 % )
+Total pins : 33 / 76 ( 43 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

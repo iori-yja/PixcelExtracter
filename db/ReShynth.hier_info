@@ -2,7 +2,7 @@
 clk => clk.IN1
 pclk => pclk.IN1
 HREF => HREF.IN1
-VSYNC => PixParaBus[0].IN2
+VSYNC => VSYNC.IN2
 Serck => Serck.IN1
 Serot <= transmittr:transmitter.SrialData
 pixdata[0] => pixdata[0].IN1
@@ -14,7 +14,7 @@ pixdata[5] => pixdata[5].IN1
 pixdata[6] => pixdata[6].IN1
 pixdata[7] => pixdata[7].IN1
 xclk <= clkdivider:clkdivider0.port1
-PixParaBus[0] <= PixParaBus[0].DB_MAX_OUTPUT_PORT_TYPE
+PixParaBus[0] <= VSYNC.DB_MAX_OUTPUT_PORT_TYPE
 PixParaBus[1] <= PixParaBus[1].DB_MAX_OUTPUT_PORT_TYPE
 PixParaBus[2] <= PixParaBus[2].DB_MAX_OUTPUT_PORT_TYPE
 PixParaBus[3] <= PixParaBus[3].DB_MAX_OUTPUT_PORT_TYPE
@@ -26,24 +26,12 @@ PixParaBus[8] <= PixParaBus[8].DB_MAX_OUTPUT_PORT_TYPE
 PixParaBus[9] <= PixParaBus[9].DB_MAX_OUTPUT_PORT_TYPE
 PixParaBus[10] <= PixParaBus[10].DB_MAX_OUTPUT_PORT_TYPE
 PixParaBus[11] <= PixParaBus[11].DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[0] <= PixPararegbg[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[1] <= PixPararegbg[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[2] <= PixPararegbg[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[3] <= PixPararegbg[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[4] <= PixPararegbg[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[5] <= PixPararegbg[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[6] <= PixPararegbg[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[7] <= PixPararegbg[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[8] <= PixPararegbg[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[9] <= PixPararegbg[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[10] <= PixPararegbg[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PixPararegbg[11] <= PixPararegbg[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 enasg <= InputLayer:ILE.SigEn
 TEST2 <= InputLayer:ILE.enC
 TEST3 <= TEST3~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nData <= pixdata[1].DB_MAX_OUTPUT_PORT_TYPE
 NREFbg <= HREF.DB_MAX_OUTPUT_PORT_TYPE
-NVSYNCbg <= PixParaBus[0].DB_MAX_OUTPUT_PORT_TYPE
+NVSYNCbg <= VSYNC.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ReShynth|InputLayer:ILE

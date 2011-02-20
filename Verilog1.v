@@ -22,7 +22,6 @@ module ReShynth (
 	input 	[7:0]pixdata,
 	output 	xclk,
 	output	[11:0]PixParaBus,
-	output reg [11:0]PixPararegbg,
 	output enasg,
 	output TEST2,
 	output reg TEST3 = 0,
@@ -36,24 +35,13 @@ module ReShynth (
 //wire Req,Greq,Blreq;
 //wire [3:0]RedOt,GreOt,BluOt;
 //wire Remp,Gemp, Bemp;
-reg [7:0]cnnegensgbg = 0;
-reg Condholdbg = 0;
 wire Wrtcmplt;
-wire Condbg;
 assign NREFbg = ~HREF;
 assign NVSYNCbg = ~VSYNC;
 
 //assign Serctl = | {Remp, Gemp, Bemp};
 always @(posedge enasg)TEST3 <= ~TEST3;
 assign nData = ~ pixdata[1];
-always @(negedge enasg)cnnegensgbg = cnnegensgbg + 2'b01;
-assign Condbg = (cnnegensgbg == 8'hF0)?1'b1:1'b0;
-always @(posedge Condbg)begin
-	if(Condholdbg == 1'b0)begin
-		PixPararegbg[11:0] <= PixParaBus[11:0];
-		Condholdbg <= 1'b1;
-		end
-	end
 wire dummy;
 assign PixParaBus[0] = VSYNC;
 InputLayer ILE (

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ReShynth
-Thu Jan 27 16:58:49 2011
+Mon Feb 21 00:19:16 2011
 Quartus II Version 10.0 Build 218 06/27/2010 SJ Web Edition
 
 
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Jan 27 16:58:49 2011    ;
+; Analysis & Synthesis Status ; Successful - Mon Feb 21 00:19:16 2011    ;
 ; Quartus II Version          ; 10.0 Build 218 06/27/2010 SJ Web Edition ;
 ; Revision Name               ; ReShynth                                 ;
 ; Top-level Entity Name       ; ReShynth                                 ;
 ; Family                      ; MAX II                                   ;
-; Total logic elements        ; 96                                       ;
-; Total pins                  ; 45                                       ;
+; Total logic elements        ; 72                                       ;
+; Total pins                  ; 33                                       ;
 ; Total virtual pins          ; 0                                        ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
 +-----------------------------+------------------------------------------+
@@ -151,33 +151,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------------------------------------+
 ; Resource                                    ; Usage                                           ;
 +---------------------------------------------+-------------------------------------------------+
-; Total logic elements                        ; 96                                              ;
-;     -- Combinational with no register       ; 21                                              ;
-;     -- Register only                        ; 27                                              ;
-;     -- Combinational with a register        ; 48                                              ;
+; Total logic elements                        ; 72                                              ;
+;     -- Combinational with no register       ; 18                                              ;
+;     -- Register only                        ; 15                                              ;
+;     -- Combinational with a register        ; 39                                              ;
 ;                                             ;                                                 ;
 ; Logic element usage by number of LUT inputs ;                                                 ;
-;     -- 4 input functions                    ; 9                                               ;
+;     -- 4 input functions                    ; 7                                               ;
 ;     -- 3 input functions                    ; 15                                              ;
-;     -- 2 input functions                    ; 28                                              ;
-;     -- 1 input functions                    ; 7                                               ;
-;     -- 0 input functions                    ; 10                                              ;
+;     -- 2 input functions                    ; 20                                              ;
+;     -- 1 input functions                    ; 6                                               ;
+;     -- 0 input functions                    ; 9                                               ;
 ;                                             ;                                                 ;
 ; Logic elements by mode                      ;                                                 ;
-;     -- normal mode                          ; 75                                              ;
-;     -- arithmetic mode                      ; 21                                              ;
+;     -- normal mode                          ; 57                                              ;
+;     -- arithmetic mode                      ; 15                                              ;
 ;     -- qfbk mode                            ; 0                                               ;
 ;     -- register cascade mode                ; 0                                               ;
 ;     -- synchronous clear/load mode          ; 9                                               ;
 ;     -- asynchronous clear/load mode         ; 9                                               ;
 ;                                             ;                                                 ;
-; Total registers                             ; 75                                              ;
-; Total logic cells in carry chains           ; 24                                              ;
-; I/O pins                                    ; 45                                              ;
+; Total registers                             ; 54                                              ;
+; Total logic cells in carry chains           ; 17                                              ;
+; I/O pins                                    ; 33                                              ;
 ; Maximum fan-out node                        ; InputLayer:ILE|TimingManager:timemanager|Sig_En ;
-; Maximum fan-out                             ; 27                                              ;
-; Total fan-out                               ; 317                                             ;
-; Average fan-out                             ; 2.25                                            ;
+; Maximum fan-out                             ; 19                                              ;
+; Total fan-out                               ; 235                                             ;
+; Average fan-out                             ; 2.24                                            ;
 +---------------------------------------------+-------------------------------------------------+
 
 
@@ -186,7 +186,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------+--------------+
 ; Compilation Hierarchy Node        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                ; Library Name ;
 +-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------+--------------+
-; |ReShynth                         ; 96 (25)     ; 75           ; 0          ; 45   ; 0            ; 21 (3)       ; 27 (12)           ; 48 (10)          ; 24 (7)          ; 0 (0)      ; |ReShynth                                          ; work         ;
+; |ReShynth                         ; 72 (1)      ; 54           ; 0          ; 33   ; 0            ; 18 (0)       ; 15 (0)            ; 39 (1)           ; 17 (0)          ; 0 (0)      ; |ReShynth                                          ; work         ;
 ;    |InputLayer:ILE|               ; 48 (0)      ; 34           ; 0          ; 0    ; 0            ; 14 (0)       ; 15 (0)            ; 19 (0)           ; 17 (0)          ; 0 (0)      ; |ReShynth|InputLayer:ILE                           ; work         ;
 ;       |Dtacutcmmit:DataCommit|    ; 15 (15)     ; 15           ; 0          ; 0    ; 0            ; 0 (0)        ; 15 (15)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ReShynth|InputLayer:ILE|Dtacutcmmit:DataCommit    ; work         ;
 ;       |TimingManager:timemanager| ; 33 (33)     ; 19           ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 19 (19)          ; 17 (17)         ; 0 (0)      ; |ReShynth|InputLayer:ILE|TimingManager:timemanager ; work         ;
@@ -201,12 +201,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 75    ;
+; Total registers                              ; 54    ;
 ; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 9     ;
-; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -237,7 +237,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 218 06/27/2010 SJ Web Edition
-    Info: Processing started: Thu Jan 27 16:58:45 2011
+    Info: Processing started: Mon Feb 21 00:19:14 2011
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ReShynth -c ReShynth
 Info: Found 1 design units, including 1 entities, in source file Sraltransmittr.v
     Info: Found entity 1: transmittr
@@ -254,16 +254,16 @@ Info: Elaborating entity "Dtacutcmmit" for hierarchy "InputLayer:ILE|Dtacutcmmit
 Info: Elaborating entity "TimingManager" for hierarchy "InputLayer:ILE|TimingManager:timemanager"
 Info: Elaborating entity "transmittr" for hierarchy "transmittr:transmitter"
 Info: Elaborating entity "clkdivider" for hierarchy "clkdivider:clkdivider0"
-Info: Implemented 141 device resources after synthesis - the final resource count might be different
+Info: Implemented 105 device resources after synthesis - the final resource count might be different
     Info: Implemented 13 input pins
-    Info: Implemented 32 output pins
-    Info: Implemented 96 logic cells
+    Info: Implemented 20 output pins
+    Info: Implemented 72 logic cells
 Info: Generated suppressed messages file /home/ioriveur/GTS-SS/ReShynth.map.smsg
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 233 megabytes
-    Info: Processing ended: Thu Jan 27 16:58:49 2011
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Mon Feb 21 00:19:16 2011
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+
