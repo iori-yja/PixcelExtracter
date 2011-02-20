@@ -1,0 +1,66 @@
+# Loading project Debtest
+# Compile of NewBufctrl.v was successful.
+# Compile of Sraltransmittr.v was successful.
+# Compile of TESTBENCH.v was successful.
+# Compile of Verilog1.v was successful.
+# 4 compiles, 0 failed with no errors. 
+vsim work.TEST
+# vsim work.TEST 
+# Loading work.TEST
+# Loading work.ReShynth
+# Loading work.InputLayer
+# Loading work.Dtacutcmmit
+# Loading work.TimingManager
+# Loading work.transmittr
+# Loading work.clkdivider
+# ** Warning: (vsim-3017) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Too few port connections. Expected 15, found 10.
+#         Region: /TEST/i1
+# ** Warning: (vsim-3722) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Missing connection for port 'TEST2'.
+# ** Warning: (vsim-3722) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Missing connection for port 'TEST3'.
+# ** Warning: (vsim-3722) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Missing connection for port 'nData'.
+# ** Warning: (vsim-3722) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Missing connection for port 'NREFbg'.
+# ** Warning: (vsim-3722) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Missing connection for port 'NVSYNCbg'.
+add wave sim:/TEST/*
+run 1600000
+#                    0pix:   X countpclk is                    0
+#                    0pix:   X countpclk is                    0
+#                 9408pix:   X countpclk is                    0
+#               150037pix:4094 countpclk is                17579
+#              1589952pix:4095 countpclk is               197568
+#              1599360pix:4094 countpclk is                    0
+# Load canceled
+# Compile of NewBufctrl.v was successful.
+# Compile of Sraltransmittr.v was successful.
+# Compile of TESTBENCH.v was successful.
+# Compile of Verilog1.v was successful.
+# 4 compiles, 0 failed with no errors. 
+# Load canceled
+# Compile of NewBufctrl.v was successful.
+# Compile of Sraltransmittr.v was successful.
+# Compile of TESTBENCH.v was successful.
+# Compile of Verilog1.v was successful.
+# 4 compiles, 0 failed with no errors. 
+vsim work.TEST
+# vsim work.TEST 
+# Loading work.TEST
+# Loading work.ReShynth
+# Loading work.InputLayer
+# Loading work.Dtacutcmmit
+# Loading work.TimingManager
+# Loading work.transmittr
+# Loading work.clkdivider
+# ** Warning: (vsim-3017) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Too few port connections. Expected 15, found 10.
+#         Region: /TEST/i1
+# ** Warning: (vsim-3722) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Missing connection for port 'TEST2'.
+# ** Warning: (vsim-3722) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Missing connection for port 'TEST3'.
+# ** Warning: (vsim-3722) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Missing connection for port 'nData'.
+# ** Warning: (vsim-3722) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Missing connection for port 'NREFbg'.
+# ** Warning: (vsim-3722) /home/ioriveur/GTS-SS/TESTBENCH.v(24): [TFMPC] - Missing connection for port 'NVSYNCbg'.
+add wave sim:/TEST/*
+run 1600000
+#                    0pix:   X countpclk is                    0
+#                    0pix:   X countpclk is                    0
+#                 9408pix:   X countpclk is                    0
+#               150037pix: 464 countpclk is                17579
+#              1589952pix: 465 countpclk is               197568
+#              1599360pix: 464 countpclk is                    0

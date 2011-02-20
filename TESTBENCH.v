@@ -10,7 +10,7 @@ wire pclk;
 reg clk;
 wire xclk;
 reg [64:0]countpclk = 0;
-wire [7:0]pixdata = 8'hFF;
+wire [7:0]pixdata = 8'h64;
 //wire [7:0] line,foo;
 //wire CEb;
 //wire [17:0] adr;

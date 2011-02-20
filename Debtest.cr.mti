@@ -1,17 +1,16 @@
-/home/ioriveur/GTS-SS/Verilog1.v {1 {vlog -work work -nocovercells /home/ioriveur/GTS-SS/Verilog1.v
-Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
--- Compiling module clkdivider
--- Compiling module ReShynth
-
-Top level modules:
-	ReShynth
-
-} {} {}} /home/ioriveur/GTS-SS/Sraltransmittr.v {1 {vlog -work work -nocovercells /home/ioriveur/GTS-SS/Sraltransmittr.v
+/home/ioriveur/GTS-SS/Sraltransmittr.v {1 {vlog -work work -nocovercells /home/ioriveur/GTS-SS/Sraltransmittr.v
 Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
 -- Compiling module transmittr
 
 Top level modules:
 	transmittr
+
+} {} {}} /home/ioriveur/GTS-SS/TESTBENCH.v {1 {vlog -work work -nocovercells /home/ioriveur/GTS-SS/TESTBENCH.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module TEST
+
+Top level modules:
+	TEST
 
 } {} {}} /home/ioriveur/GTS-SS/NewBufctrl.v {1 {vlog -work work -nocovercells /home/ioriveur/GTS-SS/NewBufctrl.v
 Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010

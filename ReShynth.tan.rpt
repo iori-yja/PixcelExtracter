@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for ReShynth
-Mon Feb 21 00:19:25 2011
+Mon Feb 21 01:25:23 2011
 Quartus II Version 10.0 Build 218 06/27/2010 SJ Web Edition
 
 
@@ -13,8 +13,8 @@ Quartus II Version 10.0 Build 218 06/27/2010 SJ Web Edition
   5. Clock Settings Summary
   6. Parallel Compilation
   7. Clock Setup: 'Serck'
-  8. Clock Setup: 'clk'
-  9. Clock Setup: 'pclk'
+  8. Clock Setup: 'pclk'
+  9. Clock Setup: 'clk'
  10. tsu
  11. tco
  12. tpd
@@ -48,20 +48,20 @@ applicable agreement for further details.
 Classic Timing Analyzer will not be available in a future release of the Quartus II software. Use the TimeQuest Timing Analyzer to run timing analysis on your design. Convert all the project settings and the timing constraints to TimeQuest Timing Analyzer equivalents.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                                                                                          ;
-+------------------------------+-------+---------------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                                            ; To                                              ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 2.145 ns                                       ; HREF                                            ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; --         ; pclk     ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 18.801 ns                                      ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[8] ; PixParaBus[2]                                   ; pclk       ; --       ; 0            ;
-; Worst-case tpd               ; N/A   ; None          ; 9.289 ns                                       ; Serck                                           ; Serot                                           ; --         ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; 8.039 ns                                       ; pixdata[2]                                      ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[2]  ; --         ; pclk     ; 0            ;
-; Clock Setup: 'pclk'          ; N/A   ; None          ; 114.13 MHz ( period = 8.762 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; pclk       ; pclk     ; 0            ;
-; Clock Setup: 'Serck'         ; N/A   ; None          ; 179.34 MHz ( period = 5.576 ns )               ; transmittr:transmitter|ShftCount[1]             ; transmittr:transmitter|ShftCount[2]             ; Serck      ; Serck    ; 0            ;
-; Clock Setup: 'clk'           ; N/A   ; None          ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clkdivider:clkdivider0|t_count[0]               ; clkdivider:clkdivider0|t_count[0]               ; clk        ; clk      ; 0            ;
-; Total number of failed paths ;       ;               ;                                                ;                                                 ;                                                 ;            ;          ; 0            ;
-+------------------------------+-------+---------------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+------------+----------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                           ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------------------------+-------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                                             ; To                                              ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------------------------+-------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 1.558 ns                                       ; HREF                                             ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; --         ; pclk     ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 15.817 ns                                      ; InputLayer:ILE|TimingManager:timemanager|line[0] ; TEST2                                           ; VSYNC      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 9.934 ns                                       ; Serck                                            ; Serot                                           ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 2.783 ns                                       ; HREF                                             ; InputLayer:ILE|TimingManager:timemanager|Sig_En ; --         ; pclk     ; 0            ;
+; Clock Setup: 'pclk'          ; N/A   ; None          ; 136.02 MHz ( period = 7.352 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0]  ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; pclk       ; pclk     ; 0            ;
+; Clock Setup: 'Serck'         ; N/A   ; None          ; 170.82 MHz ( period = 5.854 ns )               ; transmittr:transmitter|ShftCount[0]              ; transmittr:transmitter|Datareg[0]               ; Serck      ; Serck    ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clkdivider:clkdivider0|t_count[0]                ; clkdivider:clkdivider0|t_count[0]               ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                                  ;                                                 ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------------------------+-------------------------------------------------+------------+----------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -104,8 +104,8 @@ Classic Timing Analyzer will not be available in a future release of the Quartus
 ; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 ; Serck           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
-; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 ; pclk            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 ; VSYNC           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 
@@ -126,82 +126,141 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack ; Actual fmax (period)                           ; From                                ; To                                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; 179.34 MHz ( period = 5.576 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|ShftCount[2] ; Serck      ; Serck    ; None                        ; None                      ; 4.867 ns                ;
-; N/A   ; 179.57 MHz ( period = 5.569 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|ShftCount[3] ; Serck      ; Serck    ; None                        ; None                      ; 4.860 ns                ;
-; N/A   ; 184.81 MHz ( period = 5.411 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Endflg       ; Serck      ; Serck    ; None                        ; None                      ; 4.702 ns                ;
-; N/A   ; 187.90 MHz ( period = 5.322 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[3]   ; Serck      ; Serck    ; None                        ; None                      ; 4.613 ns                ;
-; N/A   ; 187.93 MHz ( period = 5.321 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[4]   ; Serck      ; Serck    ; None                        ; None                      ; 4.612 ns                ;
-; N/A   ; 188.01 MHz ( period = 5.319 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[0]   ; Serck      ; Serck    ; None                        ; None                      ; 4.610 ns                ;
-; N/A   ; 188.04 MHz ( period = 5.318 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[2]   ; Serck      ; Serck    ; None                        ; None                      ; 4.609 ns                ;
-; N/A   ; 188.11 MHz ( period = 5.316 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[1]   ; Serck      ; Serck    ; None                        ; None                      ; 4.607 ns                ;
-; N/A   ; 188.25 MHz ( period = 5.312 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[5]   ; Serck      ; Serck    ; None                        ; None                      ; 4.603 ns                ;
-; N/A   ; 191.90 MHz ( period = 5.211 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Endflg       ; Serck      ; Serck    ; None                        ; None                      ; 4.502 ns                ;
-; N/A   ; 193.31 MHz ( period = 5.173 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|ShftCount[2] ; Serck      ; Serck    ; None                        ; None                      ; 4.464 ns                ;
-; N/A   ; 193.57 MHz ( period = 5.166 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|ShftCount[3] ; Serck      ; Serck    ; None                        ; None                      ; 4.457 ns                ;
-; N/A   ; 195.24 MHz ( period = 5.122 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[3]   ; Serck      ; Serck    ; None                        ; None                      ; 4.413 ns                ;
-; N/A   ; 195.27 MHz ( period = 5.121 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[4]   ; Serck      ; Serck    ; None                        ; None                      ; 4.412 ns                ;
-; N/A   ; 195.35 MHz ( period = 5.119 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[0]   ; Serck      ; Serck    ; None                        ; None                      ; 4.410 ns                ;
-; N/A   ; 195.39 MHz ( period = 5.118 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[2]   ; Serck      ; Serck    ; None                        ; None                      ; 4.409 ns                ;
-; N/A   ; 195.47 MHz ( period = 5.116 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[1]   ; Serck      ; Serck    ; None                        ; None                      ; 4.407 ns                ;
-; N/A   ; 195.62 MHz ( period = 5.112 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[5]   ; Serck      ; Serck    ; None                        ; None                      ; 4.403 ns                ;
-; N/A   ; 197.32 MHz ( period = 5.068 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Endflg       ; Serck      ; Serck    ; None                        ; None                      ; 4.359 ns                ;
-; N/A   ; 203.67 MHz ( period = 4.910 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[3]   ; Serck      ; Serck    ; None                        ; None                      ; 4.201 ns                ;
-; N/A   ; 203.71 MHz ( period = 4.909 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[4]   ; Serck      ; Serck    ; None                        ; None                      ; 4.200 ns                ;
-; N/A   ; 203.79 MHz ( period = 4.907 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[0]   ; Serck      ; Serck    ; None                        ; None                      ; 4.198 ns                ;
-; N/A   ; 203.83 MHz ( period = 4.906 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[2]   ; Serck      ; Serck    ; None                        ; None                      ; 4.197 ns                ;
-; N/A   ; 203.92 MHz ( period = 4.904 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[1]   ; Serck      ; Serck    ; None                        ; None                      ; 4.195 ns                ;
-; N/A   ; 204.08 MHz ( period = 4.900 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[5]   ; Serck      ; Serck    ; None                        ; None                      ; 4.191 ns                ;
-; N/A   ; 213.95 MHz ( period = 4.674 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Endflg       ; Serck      ; Serck    ; None                        ; None                      ; 3.965 ns                ;
-; N/A   ; 218.10 MHz ( period = 4.585 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[3]   ; Serck      ; Serck    ; None                        ; None                      ; 3.876 ns                ;
-; N/A   ; 218.15 MHz ( period = 4.584 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[4]   ; Serck      ; Serck    ; None                        ; None                      ; 3.875 ns                ;
-; N/A   ; 218.25 MHz ( period = 4.582 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[0]   ; Serck      ; Serck    ; None                        ; None                      ; 3.873 ns                ;
-; N/A   ; 218.29 MHz ( period = 4.581 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[2]   ; Serck      ; Serck    ; None                        ; None                      ; 3.872 ns                ;
-; N/A   ; 218.39 MHz ( period = 4.579 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[1]   ; Serck      ; Serck    ; None                        ; None                      ; 3.870 ns                ;
-; N/A   ; 218.53 MHz ( period = 4.576 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[11]  ; Serck      ; Serck    ; None                        ; None                      ; 3.867 ns                ;
-; N/A   ; 218.58 MHz ( period = 4.575 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[5]   ; Serck      ; Serck    ; None                        ; None                      ; 3.866 ns                ;
-; N/A   ; 228.52 MHz ( period = 4.376 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[11]  ; Serck      ; Serck    ; None                        ; None                      ; 3.667 ns                ;
-; N/A   ; 240.15 MHz ( period = 4.164 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[11]  ; Serck      ; Serck    ; None                        ; None                      ; 3.455 ns                ;
-; N/A   ; 248.02 MHz ( period = 4.032 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[6]   ; Serck      ; Serck    ; None                        ; None                      ; 3.323 ns                ;
-; N/A   ; 248.02 MHz ( period = 4.032 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[7]   ; Serck      ; Serck    ; None                        ; None                      ; 3.323 ns                ;
-; N/A   ; 248.08 MHz ( period = 4.031 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[10]  ; Serck      ; Serck    ; None                        ; None                      ; 3.322 ns                ;
-; N/A   ; 248.32 MHz ( period = 4.027 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[8]   ; Serck      ; Serck    ; None                        ; None                      ; 3.318 ns                ;
-; N/A   ; 248.63 MHz ( period = 4.022 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[9]   ; Serck      ; Serck    ; None                        ; None                      ; 3.313 ns                ;
-; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; transmittr:transmitter|Endflg       ; transmittr:transmitter|Endflg       ; Serck      ; Serck    ; None                        ; None                      ; 3.145 ns                ;
-; N/A   ; 260.48 MHz ( period = 3.839 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[11]  ; Serck      ; Serck    ; None                        ; None                      ; 3.130 ns                ;
-; N/A   ; 260.96 MHz ( period = 3.832 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[6]   ; Serck      ; Serck    ; None                        ; None                      ; 3.123 ns                ;
-; N/A   ; 260.96 MHz ( period = 3.832 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[7]   ; Serck      ; Serck    ; None                        ; None                      ; 3.123 ns                ;
-; N/A   ; 261.03 MHz ( period = 3.831 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[10]  ; Serck      ; Serck    ; None                        ; None                      ; 3.122 ns                ;
-; N/A   ; 261.30 MHz ( period = 3.827 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[8]   ; Serck      ; Serck    ; None                        ; None                      ; 3.118 ns                ;
-; N/A   ; 261.64 MHz ( period = 3.822 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[9]   ; Serck      ; Serck    ; None                        ; None                      ; 3.113 ns                ;
-; N/A   ; 263.92 MHz ( period = 3.789 ns )               ; transmittr:transmitter|Datareg[6]   ; transmittr:transmitter|Datareg[5]   ; Serck      ; Serck    ; None                        ; None                      ; 3.080 ns                ;
-; N/A   ; 276.24 MHz ( period = 3.620 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[6]   ; Serck      ; Serck    ; None                        ; None                      ; 2.911 ns                ;
-; N/A   ; 276.24 MHz ( period = 3.620 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[7]   ; Serck      ; Serck    ; None                        ; None                      ; 2.911 ns                ;
-; N/A   ; 276.32 MHz ( period = 3.619 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[10]  ; Serck      ; Serck    ; None                        ; None                      ; 2.910 ns                ;
-; N/A   ; 276.63 MHz ( period = 3.615 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[8]   ; Serck      ; Serck    ; None                        ; None                      ; 2.906 ns                ;
-; N/A   ; 277.01 MHz ( period = 3.610 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[9]   ; Serck      ; Serck    ; None                        ; None                      ; 2.901 ns                ;
-; N/A   ; 303.49 MHz ( period = 3.295 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[6]   ; Serck      ; Serck    ; None                        ; None                      ; 2.586 ns                ;
-; N/A   ; 303.49 MHz ( period = 3.295 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[7]   ; Serck      ; Serck    ; None                        ; None                      ; 2.586 ns                ;
-; N/A   ; 303.58 MHz ( period = 3.294 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[10]  ; Serck      ; Serck    ; None                        ; None                      ; 2.585 ns                ;
-; N/A   ; 303.95 MHz ( period = 3.290 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[8]   ; Serck      ; Serck    ; None                        ; None                      ; 2.581 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[9]   ; Serck      ; Serck    ; None                        ; None                      ; 2.576 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[11]  ; transmittr:transmitter|Datareg[10]  ; Serck      ; Serck    ; None                        ; None                      ; 2.325 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|ShftCount[2] ; Serck      ; Serck    ; None                        ; None                      ; 2.167 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|ShftCount[3] ; Serck      ; Serck    ; None                        ; None                      ; 2.160 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[8]   ; transmittr:transmitter|Datareg[7]   ; Serck      ; Serck    ; None                        ; None                      ; 2.117 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[1]   ; transmittr:transmitter|Datareg[0]   ; Serck      ; Serck    ; None                        ; None                      ; 2.079 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[4]   ; transmittr:transmitter|Datareg[3]   ; Serck      ; Serck    ; None                        ; None                      ; 2.077 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|ShftCount[3] ; Serck      ; Serck    ; None                        ; None                      ; 2.023 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|ShftCount[2] ; Serck      ; Serck    ; None                        ; None                      ; 2.013 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[10]  ; transmittr:transmitter|Datareg[9]   ; Serck      ; Serck    ; None                        ; None                      ; 1.976 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|ShftCount[1] ; Serck      ; Serck    ; None                        ; None                      ; 1.772 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[3]   ; transmittr:transmitter|Datareg[2]   ; Serck      ; Serck    ; None                        ; None                      ; 1.761 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[2]   ; transmittr:transmitter|Datareg[1]   ; Serck      ; Serck    ; None                        ; None                      ; 1.757 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[5]   ; transmittr:transmitter|Datareg[4]   ; Serck      ; Serck    ; None                        ; None                      ; 1.757 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[9]   ; transmittr:transmitter|Datareg[8]   ; Serck      ; Serck    ; None                        ; None                      ; 1.756 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[7]   ; transmittr:transmitter|Datareg[6]   ; Serck      ; Serck    ; None                        ; None                      ; 1.753 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|ShftCount[1] ; Serck      ; Serck    ; None                        ; None                      ; 1.551 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|ShftCount[0] ; Serck      ; Serck    ; None                        ; None                      ; 1.549 ns                ;
+; N/A   ; 170.82 MHz ( period = 5.854 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[0]   ; Serck      ; Serck    ; None                        ; None                      ; 5.145 ns                ;
+; N/A   ; 171.12 MHz ( period = 5.844 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[0]   ; Serck      ; Serck    ; None                        ; None                      ; 5.135 ns                ;
+; N/A   ; 192.79 MHz ( period = 5.187 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[0]   ; Serck      ; Serck    ; None                        ; None                      ; 4.478 ns                ;
+; N/A   ; 202.47 MHz ( period = 4.939 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[0]   ; Serck      ; Serck    ; None                        ; None                      ; 4.230 ns                ;
+; N/A   ; 212.04 MHz ( period = 4.716 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Endflg       ; Serck      ; Serck    ; None                        ; None                      ; 4.007 ns                ;
+; N/A   ; 212.13 MHz ( period = 4.714 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[5]   ; Serck      ; Serck    ; None                        ; None                      ; 4.005 ns                ;
+; N/A   ; 212.18 MHz ( period = 4.713 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[6]   ; Serck      ; Serck    ; None                        ; None                      ; 4.004 ns                ;
+; N/A   ; 212.27 MHz ( period = 4.711 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[4]   ; Serck      ; Serck    ; None                        ; None                      ; 4.002 ns                ;
+; N/A   ; 212.59 MHz ( period = 4.704 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[7]   ; Serck      ; Serck    ; None                        ; None                      ; 3.995 ns                ;
+; N/A   ; 216.87 MHz ( period = 4.611 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Endflg       ; Serck      ; Serck    ; None                        ; None                      ; 3.902 ns                ;
+; N/A   ; 220.31 MHz ( period = 4.539 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Endflg       ; Serck      ; Serck    ; None                        ; None                      ; 3.830 ns                ;
+; N/A   ; 220.41 MHz ( period = 4.537 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[5]   ; Serck      ; Serck    ; None                        ; None                      ; 3.828 ns                ;
+; N/A   ; 220.46 MHz ( period = 4.536 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[6]   ; Serck      ; Serck    ; None                        ; None                      ; 3.827 ns                ;
+; N/A   ; 220.56 MHz ( period = 4.534 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[4]   ; Serck      ; Serck    ; None                        ; None                      ; 3.825 ns                ;
+; N/A   ; 220.90 MHz ( period = 4.527 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[7]   ; Serck      ; Serck    ; None                        ; None                      ; 3.818 ns                ;
+; N/A   ; 227.07 MHz ( period = 4.404 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[9]   ; Serck      ; Serck    ; None                        ; None                      ; 3.695 ns                ;
+; N/A   ; 228.89 MHz ( period = 4.369 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[5]   ; Serck      ; Serck    ; None                        ; None                      ; 3.660 ns                ;
+; N/A   ; 228.94 MHz ( period = 4.368 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[6]   ; Serck      ; Serck    ; None                        ; None                      ; 3.659 ns                ;
+; N/A   ; 229.04 MHz ( period = 4.366 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[4]   ; Serck      ; Serck    ; None                        ; None                      ; 3.657 ns                ;
+; N/A   ; 229.41 MHz ( period = 4.359 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[7]   ; Serck      ; Serck    ; None                        ; None                      ; 3.650 ns                ;
+; N/A   ; 231.43 MHz ( period = 4.321 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|ShftCount[3] ; Serck      ; Serck    ; None                        ; None                      ; 3.612 ns                ;
+; N/A   ; 231.91 MHz ( period = 4.312 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|ShftCount[2] ; Serck      ; Serck    ; None                        ; None                      ; 3.603 ns                ;
+; N/A   ; 236.57 MHz ( period = 4.227 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[9]   ; Serck      ; Serck    ; None                        ; None                      ; 3.518 ns                ;
+; N/A   ; 246.37 MHz ( period = 4.059 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[9]   ; Serck      ; Serck    ; None                        ; None                      ; 3.350 ns                ;
+; N/A   ; 250.00 MHz ( period = 4.000 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Endflg       ; Serck      ; Serck    ; None                        ; None                      ; 3.291 ns                ;
+; N/A   ; 250.13 MHz ( period = 3.998 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[5]   ; Serck      ; Serck    ; None                        ; None                      ; 3.289 ns                ;
+; N/A   ; 250.19 MHz ( period = 3.997 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[6]   ; Serck      ; Serck    ; None                        ; None                      ; 3.288 ns                ;
+; N/A   ; 250.31 MHz ( period = 3.995 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[4]   ; Serck      ; Serck    ; None                        ; None                      ; 3.286 ns                ;
+; N/A   ; 250.75 MHz ( period = 3.988 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[7]   ; Serck      ; Serck    ; None                        ; None                      ; 3.279 ns                ;
+; N/A   ; 251.89 MHz ( period = 3.970 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|ShftCount[3] ; Serck      ; Serck    ; None                        ; None                      ; 3.261 ns                ;
+; N/A   ; 252.46 MHz ( period = 3.961 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|ShftCount[2] ; Serck      ; Serck    ; None                        ; None                      ; 3.252 ns                ;
+; N/A   ; 254.26 MHz ( period = 3.933 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[3]   ; Serck      ; Serck    ; None                        ; None                      ; 3.224 ns                ;
+; N/A   ; 254.32 MHz ( period = 3.932 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[2]   ; Serck      ; Serck    ; None                        ; None                      ; 3.223 ns                ;
+; N/A   ; 254.39 MHz ( period = 3.931 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|ShftCount[2] ; Serck      ; Serck    ; None                        ; None                      ; 3.222 ns                ;
+; N/A   ; 254.91 MHz ( period = 3.923 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|ShftCount[3] ; Serck      ; Serck    ; None                        ; None                      ; 3.214 ns                ;
+; N/A   ; 255.04 MHz ( period = 3.921 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[8]   ; Serck      ; Serck    ; None                        ; None                      ; 3.212 ns                ;
+; N/A   ; 266.24 MHz ( period = 3.756 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[3]   ; Serck      ; Serck    ; None                        ; None                      ; 3.047 ns                ;
+; N/A   ; 266.31 MHz ( period = 3.755 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[2]   ; Serck      ; Serck    ; None                        ; None                      ; 3.046 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[8]   ; Serck      ; Serck    ; None                        ; None                      ; 3.035 ns                ;
+; N/A   ; 267.17 MHz ( period = 3.743 ns )               ; transmittr:transmitter|Datareg[3]   ; transmittr:transmitter|Datareg[2]   ; Serck      ; Serck    ; None                        ; None                      ; 3.034 ns                ;
+; N/A   ; 271.15 MHz ( period = 3.688 ns )               ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[9]   ; Serck      ; Serck    ; None                        ; None                      ; 2.979 ns                ;
+; N/A   ; 278.71 MHz ( period = 3.588 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[3]   ; Serck      ; Serck    ; None                        ; None                      ; 2.879 ns                ;
+; N/A   ; 278.78 MHz ( period = 3.587 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[2]   ; Serck      ; Serck    ; None                        ; None                      ; 2.878 ns                ;
+; N/A   ; 279.64 MHz ( period = 3.576 ns )               ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[8]   ; Serck      ; Serck    ; None                        ; None                      ; 2.867 ns                ;
+; N/A   ; 289.35 MHz ( period = 3.456 ns )               ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[1]   ; Serck      ; Serck    ; None                        ; None                      ; 2.747 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[1]   ; Serck      ; Serck    ; None                        ; None                      ; 2.570 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[10]  ; transmittr:transmitter|Datareg[9]   ; Serck      ; Serck    ; None                        ; None                      ; 2.564 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[3]   ; Serck      ; Serck    ; None                        ; None                      ; 2.508 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[2]   ; Serck      ; Serck    ; None                        ; None                      ; 2.507 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[8]   ; Serck      ; Serck    ; None                        ; None                      ; 2.496 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[1]   ; transmittr:transmitter|Datareg[0]   ; Serck      ; Serck    ; None                        ; None                      ; 2.465 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Endflg       ; transmittr:transmitter|Endflg       ; Serck      ; Serck    ; None                        ; None                      ; 2.449 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[1]   ; Serck      ; Serck    ; None                        ; None                      ; 2.402 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[9]   ; transmittr:transmitter|Datareg[8]   ; Serck      ; Serck    ; None                        ; None                      ; 2.193 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[4]   ; transmittr:transmitter|Datareg[3]   ; Serck      ; Serck    ; None                        ; None                      ; 2.163 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|ShftCount[1] ; Serck      ; Serck    ; None                        ; None                      ; 2.123 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|Datareg[10]  ; Serck      ; Serck    ; None                        ; None                      ; 2.120 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[2]   ; transmittr:transmitter|Datareg[1]   ; Serck      ; Serck    ; None                        ; None                      ; 2.060 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[1]   ; Serck      ; Serck    ; None                        ; None                      ; 2.031 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|Datareg[10]  ; Serck      ; Serck    ; None                        ; None                      ; 1.995 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[5]   ; transmittr:transmitter|Datareg[4]   ; Serck      ; Serck    ; None                        ; None                      ; 1.955 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[8]   ; transmittr:transmitter|Datareg[7]   ; Serck      ; Serck    ; None                        ; None                      ; 1.879 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[0] ; transmittr:transmitter|ShftCount[0] ; Serck      ; Serck    ; None                        ; None                      ; 1.801 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|Datareg[10]  ; Serck      ; Serck    ; None                        ; None                      ; 1.799 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|ShftCount[3] ; Serck      ; Serck    ; None                        ; None                      ; 1.791 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[1] ; transmittr:transmitter|ShftCount[1] ; Serck      ; Serck    ; None                        ; None                      ; 1.788 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[2] ; transmittr:transmitter|ShftCount[2] ; Serck      ; Serck    ; None                        ; None                      ; 1.780 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|ShftCount[3] ; transmittr:transmitter|Datareg[10]  ; Serck      ; Serck    ; None                        ; None                      ; 1.526 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[7]   ; transmittr:transmitter|Datareg[6]   ; Serck      ; Serck    ; None                        ; None                      ; 1.498 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; transmittr:transmitter|Datareg[6]   ; transmittr:transmitter|Datareg[5]   ; Serck      ; Serck    ; None                        ; None                      ; 1.495 ns                ;
 +-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'pclk'                                                                                                                                                                                                                                                    ;
++-------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                            ; To                                              ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 136.02 MHz ( period = 7.352 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk       ; pclk     ; None                        ; None                      ; 6.643 ns                ;
+; N/A   ; 136.02 MHz ( period = 7.352 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; pclk       ; pclk     ; None                        ; None                      ; 6.643 ns                ;
+; N/A   ; 136.02 MHz ( period = 7.352 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk       ; pclk     ; None                        ; None                      ; 6.643 ns                ;
+; N/A   ; 136.02 MHz ( period = 7.352 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; pclk       ; pclk     ; None                        ; None                      ; 6.643 ns                ;
+; N/A   ; 136.02 MHz ( period = 7.352 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk       ; pclk     ; None                        ; None                      ; 6.643 ns                ;
+; N/A   ; 136.02 MHz ( period = 7.352 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk       ; pclk     ; None                        ; None                      ; 6.643 ns                ;
+; N/A   ; 136.02 MHz ( period = 7.352 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; pclk       ; pclk     ; None                        ; None                      ; 6.643 ns                ;
+; N/A   ; 136.02 MHz ( period = 7.352 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; pclk       ; pclk     ; None                        ; None                      ; 6.643 ns                ;
+; N/A   ; 136.02 MHz ( period = 7.352 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; pclk       ; pclk     ; None                        ; None                      ; 6.643 ns                ;
+; N/A   ; 143.02 MHz ( period = 6.992 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk       ; pclk     ; None                        ; None                      ; 6.283 ns                ;
+; N/A   ; 143.02 MHz ( period = 6.992 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; pclk       ; pclk     ; None                        ; None                      ; 6.283 ns                ;
+; N/A   ; 143.02 MHz ( period = 6.992 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk       ; pclk     ; None                        ; None                      ; 6.283 ns                ;
+; N/A   ; 143.02 MHz ( period = 6.992 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; pclk       ; pclk     ; None                        ; None                      ; 6.283 ns                ;
+; N/A   ; 143.02 MHz ( period = 6.992 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk       ; pclk     ; None                        ; None                      ; 6.283 ns                ;
+; N/A   ; 143.02 MHz ( period = 6.992 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk       ; pclk     ; None                        ; None                      ; 6.283 ns                ;
+; N/A   ; 143.02 MHz ( period = 6.992 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; pclk       ; pclk     ; None                        ; None                      ; 6.283 ns                ;
+; N/A   ; 143.02 MHz ( period = 6.992 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; pclk       ; pclk     ; None                        ; None                      ; 6.283 ns                ;
+; N/A   ; 143.02 MHz ( period = 6.992 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; pclk       ; pclk     ; None                        ; None                      ; 6.283 ns                ;
+; N/A   ; 236.35 MHz ( period = 4.231 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk       ; pclk     ; None                        ; None                      ; 3.522 ns                ;
+; N/A   ; 236.35 MHz ( period = 4.231 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk       ; pclk     ; None                        ; None                      ; 3.522 ns                ;
+; N/A   ; 236.35 MHz ( period = 4.231 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk       ; pclk     ; None                        ; None                      ; 3.522 ns                ;
+; N/A   ; 236.35 MHz ( period = 4.231 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk       ; pclk     ; None                        ; None                      ; 3.522 ns                ;
+; N/A   ; 238.21 MHz ( period = 4.198 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk       ; pclk     ; None                        ; None                      ; 3.489 ns                ;
+; N/A   ; 238.21 MHz ( period = 4.198 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk       ; pclk     ; None                        ; None                      ; 3.489 ns                ;
+; N/A   ; 238.21 MHz ( period = 4.198 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk       ; pclk     ; None                        ; None                      ; 3.489 ns                ;
+; N/A   ; 238.21 MHz ( period = 4.198 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk       ; pclk     ; None                        ; None                      ; 3.489 ns                ;
+; N/A   ; 243.43 MHz ( period = 4.108 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk       ; pclk     ; None                        ; None                      ; 3.399 ns                ;
+; N/A   ; 243.43 MHz ( period = 4.108 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk       ; pclk     ; None                        ; None                      ; 3.399 ns                ;
+; N/A   ; 243.43 MHz ( period = 4.108 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk       ; pclk     ; None                        ; None                      ; 3.399 ns                ;
+; N/A   ; 243.43 MHz ( period = 4.108 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk       ; pclk     ; None                        ; None                      ; 3.399 ns                ;
+; N/A   ; 247.16 MHz ( period = 4.046 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk       ; pclk     ; None                        ; None                      ; 3.337 ns                ;
+; N/A   ; 247.16 MHz ( period = 4.046 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk       ; pclk     ; None                        ; None                      ; 3.337 ns                ;
+; N/A   ; 247.16 MHz ( period = 4.046 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk       ; pclk     ; None                        ; None                      ; 3.337 ns                ;
+; N/A   ; 247.16 MHz ( period = 4.046 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk       ; pclk     ; None                        ; None                      ; 3.337 ns                ;
+; N/A   ; 250.13 MHz ( period = 3.998 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|Sig_En ; pclk       ; pclk     ; None                        ; None                      ; 3.289 ns                ;
+; N/A   ; 250.88 MHz ( period = 3.986 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk       ; pclk     ; None                        ; None                      ; 3.277 ns                ;
+; N/A   ; 258.80 MHz ( period = 3.864 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk       ; pclk     ; None                        ; None                      ; 3.155 ns                ;
+; N/A   ; 258.87 MHz ( period = 3.863 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk       ; pclk     ; None                        ; None                      ; 3.154 ns                ;
+; N/A   ; 265.67 MHz ( period = 3.764 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; pclk       ; pclk     ; None                        ; None                      ; 3.055 ns                ;
+; N/A   ; 267.31 MHz ( period = 3.741 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk       ; pclk     ; None                        ; None                      ; 3.032 ns                ;
+; N/A   ; 267.38 MHz ( period = 3.740 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk       ; pclk     ; None                        ; None                      ; 3.031 ns                ;
+; N/A   ; 268.02 MHz ( period = 3.731 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; pclk       ; pclk     ; None                        ; None                      ; 3.022 ns                ;
+; N/A   ; 274.27 MHz ( period = 3.646 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|Sig_En ; pclk       ; pclk     ; None                        ; None                      ; 2.937 ns                ;
+; N/A   ; 274.65 MHz ( period = 3.641 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; pclk       ; pclk     ; None                        ; None                      ; 2.932 ns                ;
+; N/A   ; 274.65 MHz ( period = 3.641 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; pclk       ; pclk     ; None                        ; None                      ; 2.932 ns                ;
+; N/A   ; 284.25 MHz ( period = 3.518 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk       ; pclk     ; None                        ; None                      ; 2.809 ns                ;
+; N/A   ; 284.25 MHz ( period = 3.518 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; pclk       ; pclk     ; None                        ; None                      ; 2.809 ns                ;
+; N/A   ; 284.25 MHz ( period = 3.518 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; pclk       ; pclk     ; None                        ; None                      ; 2.809 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; pclk       ; pclk     ; None                        ; None                      ; 2.076 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk       ; pclk     ; None                        ; None                      ; 2.076 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk       ; pclk     ; None                        ; None                      ; 2.075 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; pclk       ; pclk     ; None                        ; None                      ; 2.066 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk       ; pclk     ; None                        ; None                      ; 1.962 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; pclk       ; pclk     ; None                        ; None                      ; 1.962 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; pclk       ; pclk     ; None                        ; None                      ; 1.962 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; TEST3~reg0                                      ; TEST3~reg0                                      ; pclk       ; pclk     ; None                        ; None                      ; 1.484 ns                ;
++-------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,183 +268,81 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+------------------------------------------------+-----------------------------------+-----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack ; Actual fmax (period)                           ; From                              ; To                                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-------+------------------------------------------------+-----------------------------------+-----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clkdivider:clkdivider0|t_count[0] ; clkdivider:clkdivider0|t_count[0] ; clk        ; clk      ; None                        ; None                      ; 1.511 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clkdivider:clkdivider0|t_count[1] ; clkdivider:clkdivider0|t_count[1] ; clk        ; clk      ; None                        ; None                      ; 1.503 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clkdivider:clkdivider0|t_count[0] ; clkdivider:clkdivider0|t_count[0] ; clk        ; clk      ; None                        ; None                      ; 1.502 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clkdivider:clkdivider0|t_count[1] ; clkdivider:clkdivider0|t_count[1] ; clk        ; clk      ; None                        ; None                      ; 1.484 ns                ;
 +-------+------------------------------------------------+-----------------------------------+-----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'pclk'                                                                                                                                                                                                                                                     ;
-+-------+------------------------------------------------+-------------------------------------------------+--------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack ; Actual fmax (period)                           ; From                                            ; To                                               ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-------+------------------------------------------------+-------------------------------------------------+--------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; 114.13 MHz ( period = 8.762 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[0]  ; pclk       ; pclk     ; None                        ; None                      ; 8.053 ns                ;
-; N/A   ; 114.13 MHz ( period = 8.762 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[8]  ; pclk       ; pclk     ; None                        ; None                      ; 8.053 ns                ;
-; N/A   ; 114.13 MHz ( period = 8.762 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[7]  ; pclk       ; pclk     ; None                        ; None                      ; 8.053 ns                ;
-; N/A   ; 114.13 MHz ( period = 8.762 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[4]  ; pclk       ; pclk     ; None                        ; None                      ; 8.053 ns                ;
-; N/A   ; 114.13 MHz ( period = 8.762 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[6]  ; pclk       ; pclk     ; None                        ; None                      ; 8.053 ns                ;
-; N/A   ; 114.13 MHz ( period = 8.762 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[5]  ; pclk       ; pclk     ; None                        ; None                      ; 8.053 ns                ;
-; N/A   ; 114.13 MHz ( period = 8.762 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[3]  ; pclk       ; pclk     ; None                        ; None                      ; 8.053 ns                ;
-; N/A   ; 114.13 MHz ( period = 8.762 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[2]  ; pclk       ; pclk     ; None                        ; None                      ; 8.053 ns                ;
-; N/A   ; 114.13 MHz ( period = 8.762 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|foo[1]  ; pclk       ; pclk     ; None                        ; None                      ; 8.053 ns                ;
-; N/A   ; 119.75 MHz ( period = 8.351 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[0]  ; pclk       ; pclk     ; None                        ; None                      ; 7.642 ns                ;
-; N/A   ; 119.75 MHz ( period = 8.351 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[8]  ; pclk       ; pclk     ; None                        ; None                      ; 7.642 ns                ;
-; N/A   ; 119.75 MHz ( period = 8.351 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[7]  ; pclk       ; pclk     ; None                        ; None                      ; 7.642 ns                ;
-; N/A   ; 119.75 MHz ( period = 8.351 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[4]  ; pclk       ; pclk     ; None                        ; None                      ; 7.642 ns                ;
-; N/A   ; 119.75 MHz ( period = 8.351 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[6]  ; pclk       ; pclk     ; None                        ; None                      ; 7.642 ns                ;
-; N/A   ; 119.75 MHz ( period = 8.351 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[5]  ; pclk       ; pclk     ; None                        ; None                      ; 7.642 ns                ;
-; N/A   ; 119.75 MHz ( period = 8.351 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[3]  ; pclk       ; pclk     ; None                        ; None                      ; 7.642 ns                ;
-; N/A   ; 119.75 MHz ( period = 8.351 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[2]  ; pclk       ; pclk     ; None                        ; None                      ; 7.642 ns                ;
-; N/A   ; 119.75 MHz ( period = 8.351 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|foo[1]  ; pclk       ; pclk     ; None                        ; None                      ; 7.642 ns                ;
-; N/A   ; 198.14 MHz ( period = 5.047 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; InputLayer:ILE|TimingManager:timemanager|Sig_En  ; pclk       ; pclk     ; None                        ; None                      ; 4.338 ns                ;
-; N/A   ; 235.85 MHz ( period = 4.240 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[8]  ; pclk       ; pclk     ; None                        ; None                      ; 3.531 ns                ;
-; N/A   ; 235.85 MHz ( period = 4.240 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[7]  ; pclk       ; pclk     ; None                        ; None                      ; 3.531 ns                ;
-; N/A   ; 235.85 MHz ( period = 4.240 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[6]  ; pclk       ; pclk     ; None                        ; None                      ; 3.531 ns                ;
-; N/A   ; 235.85 MHz ( period = 4.240 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[5]  ; pclk       ; pclk     ; None                        ; None                      ; 3.531 ns                ;
-; N/A   ; 238.21 MHz ( period = 4.198 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[8]  ; pclk       ; pclk     ; None                        ; None                      ; 3.489 ns                ;
-; N/A   ; 238.21 MHz ( period = 4.198 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[7]  ; pclk       ; pclk     ; None                        ; None                      ; 3.489 ns                ;
-; N/A   ; 238.21 MHz ( period = 4.198 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[6]  ; pclk       ; pclk     ; None                        ; None                      ; 3.489 ns                ;
-; N/A   ; 238.21 MHz ( period = 4.198 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[5]  ; pclk       ; pclk     ; None                        ; None                      ; 3.489 ns                ;
-; N/A   ; 242.84 MHz ( period = 4.118 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[8]  ; pclk       ; pclk     ; None                        ; None                      ; 3.409 ns                ;
-; N/A   ; 242.84 MHz ( period = 4.118 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[7]  ; pclk       ; pclk     ; None                        ; None                      ; 3.409 ns                ;
-; N/A   ; 242.84 MHz ( period = 4.118 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[6]  ; pclk       ; pclk     ; None                        ; None                      ; 3.409 ns                ;
-; N/A   ; 242.84 MHz ( period = 4.118 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[5]  ; pclk       ; pclk     ; None                        ; None                      ; 3.409 ns                ;
-; N/A   ; 247.16 MHz ( period = 4.046 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; InputLayer:ILE|TimingManager:timemanager|foo[8]  ; pclk       ; pclk     ; None                        ; None                      ; 3.337 ns                ;
-; N/A   ; 247.16 MHz ( period = 4.046 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; InputLayer:ILE|TimingManager:timemanager|foo[7]  ; pclk       ; pclk     ; None                        ; None                      ; 3.337 ns                ;
-; N/A   ; 247.16 MHz ( period = 4.046 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; InputLayer:ILE|TimingManager:timemanager|foo[6]  ; pclk       ; pclk     ; None                        ; None                      ; 3.337 ns                ;
-; N/A   ; 247.16 MHz ( period = 4.046 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; InputLayer:ILE|TimingManager:timemanager|foo[5]  ; pclk       ; pclk     ; None                        ; None                      ; 3.337 ns                ;
-; N/A   ; 250.88 MHz ( period = 3.986 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; InputLayer:ILE|TimingManager:timemanager|foo[8]  ; pclk       ; pclk     ; None                        ; None                      ; 3.277 ns                ;
-; N/A   ; 258.53 MHz ( period = 3.868 ns )               ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[3]  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[11] ; pclk       ; pclk     ; None                        ; None                      ; 1.225 ns                ;
-; N/A   ; 258.67 MHz ( period = 3.866 ns )               ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[0]  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[8]  ; pclk       ; pclk     ; None                        ; None                      ; 1.224 ns                ;
-; N/A   ; 258.80 MHz ( period = 3.864 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; InputLayer:ILE|TimingManager:timemanager|foo[8]  ; pclk       ; pclk     ; None                        ; None                      ; 3.155 ns                ;
-; N/A   ; 258.87 MHz ( period = 3.863 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; InputLayer:ILE|TimingManager:timemanager|foo[7]  ; pclk       ; pclk     ; None                        ; None                      ; 3.154 ns                ;
-; N/A   ; 258.93 MHz ( period = 3.862 ns )               ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[2]  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[10] ; pclk       ; pclk     ; None                        ; None                      ; 1.222 ns                ;
-; N/A   ; 259.07 MHz ( period = 3.860 ns )               ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[1]  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[9]  ; pclk       ; pclk     ; None                        ; None                      ; 1.221 ns                ;
-; N/A   ; 265.04 MHz ( period = 3.773 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[4]  ; pclk       ; pclk     ; None                        ; None                      ; 3.064 ns                ;
-; N/A   ; 267.31 MHz ( period = 3.741 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; InputLayer:ILE|TimingManager:timemanager|foo[7]  ; pclk       ; pclk     ; None                        ; None                      ; 3.032 ns                ;
-; N/A   ; 267.38 MHz ( period = 3.740 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; InputLayer:ILE|TimingManager:timemanager|foo[6]  ; pclk       ; pclk     ; None                        ; None                      ; 3.031 ns                ;
-; N/A   ; 268.02 MHz ( period = 3.731 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[4]  ; pclk       ; pclk     ; None                        ; None                      ; 3.022 ns                ;
-; N/A   ; 273.90 MHz ( period = 3.651 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[4]  ; pclk       ; pclk     ; None                        ; None                      ; 2.942 ns                ;
-; N/A   ; 273.97 MHz ( period = 3.650 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[3]  ; pclk       ; pclk     ; None                        ; None                      ; 2.941 ns                ;
-; N/A   ; 276.40 MHz ( period = 3.618 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; InputLayer:ILE|TimingManager:timemanager|Sig_En  ; pclk       ; pclk     ; None                        ; None                      ; 2.909 ns                ;
-; N/A   ; 283.45 MHz ( period = 3.528 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[3]  ; pclk       ; pclk     ; None                        ; None                      ; 2.819 ns                ;
-; N/A   ; 283.53 MHz ( period = 3.527 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[2]  ; pclk       ; pclk     ; None                        ; None                      ; 2.818 ns                ;
-; N/A   ; 284.25 MHz ( period = 3.518 ns )               ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; InputLayer:ILE|TimingManager:timemanager|foo[8]  ; pclk       ; pclk     ; None                        ; None                      ; 2.809 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; InputLayer:ILE|TimingManager:timemanager|foo[4]  ; pclk       ; pclk     ; None                        ; None                      ; 2.076 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; InputLayer:ILE|TimingManager:timemanager|foo[6]  ; pclk       ; pclk     ; None                        ; None                      ; 2.076 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; InputLayer:ILE|TimingManager:timemanager|foo[5]  ; pclk       ; pclk     ; None                        ; None                      ; 2.075 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; InputLayer:ILE|TimingManager:timemanager|foo[3]  ; pclk       ; pclk     ; None                        ; None                      ; 2.066 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; InputLayer:ILE|TimingManager:timemanager|foo[2]  ; pclk       ; pclk     ; None                        ; None                      ; 1.972 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; InputLayer:ILE|TimingManager:timemanager|foo[1]  ; pclk       ; pclk     ; None                        ; None                      ; 1.971 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; InputLayer:ILE|TimingManager:timemanager|foo[7]  ; pclk       ; pclk     ; None                        ; None                      ; 1.962 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; TEST3~reg0                                      ; TEST3~reg0                                       ; pclk       ; pclk     ; None                        ; None                      ; 1.485 ns                ;
-+-------+------------------------------------------------+-------------------------------------------------+--------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++--------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                    ;
++-------+--------------+------------+-------+-------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From  ; To                                              ; To Clock ;
++-------+--------------+------------+-------+-------------------------------------------------+----------+
+; N/A   ; None         ; 1.558 ns   ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk     ;
+; N/A   ; None         ; 1.558 ns   ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; pclk     ;
+; N/A   ; None         ; 1.558 ns   ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk     ;
+; N/A   ; None         ; 1.558 ns   ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; pclk     ;
+; N/A   ; None         ; 1.558 ns   ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk     ;
+; N/A   ; None         ; 1.558 ns   ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk     ;
+; N/A   ; None         ; 1.558 ns   ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; pclk     ;
+; N/A   ; None         ; 1.558 ns   ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; pclk     ;
+; N/A   ; None         ; 1.558 ns   ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; pclk     ;
+; N/A   ; None         ; -0.311 ns  ; VSYNC ; transmittr:transmitter|Datareg[0]               ; Serck    ;
+; N/A   ; None         ; -2.229 ns  ; HREF  ; InputLayer:ILE|TimingManager:timemanager|Sig_En ; pclk     ;
++-------+--------------+------------+-------+-------------------------------------------------+----------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; tsu                                                                                                         ;
-+-------+--------------+------------+------------+-------------------------------------------------+----------+
-; Slack ; Required tsu ; Actual tsu ; From       ; To                                              ; To Clock ;
-+-------+--------------+------------+------------+-------------------------------------------------+----------+
-; N/A   ; None         ; 2.145 ns   ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; pclk     ;
-; N/A   ; None         ; 2.145 ns   ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk     ;
-; N/A   ; None         ; 2.145 ns   ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk     ;
-; N/A   ; None         ; 2.145 ns   ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; pclk     ;
-; N/A   ; None         ; 2.145 ns   ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk     ;
-; N/A   ; None         ; 2.145 ns   ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk     ;
-; N/A   ; None         ; 2.145 ns   ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; pclk     ;
-; N/A   ; None         ; 2.145 ns   ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; pclk     ;
-; N/A   ; None         ; 2.145 ns   ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; pclk     ;
-; N/A   ; None         ; 0.061 ns   ; VSYNC      ; transmittr:transmitter|Datareg[0]               ; Serck    ;
-; N/A   ; None         ; -2.215 ns  ; HREF       ; InputLayer:ILE|TimingManager:timemanager|Sig_En ; pclk     ;
-; N/A   ; None         ; -6.350 ns  ; pixdata[4] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[4] ; pclk     ;
-; N/A   ; None         ; -6.384 ns  ; pixdata[0] ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[0]  ; pclk     ;
-; N/A   ; None         ; -6.538 ns  ; pixdata[1] ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[1]  ; pclk     ;
-; N/A   ; None         ; -6.540 ns  ; pixdata[1] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[1] ; pclk     ;
-; N/A   ; None         ; -6.660 ns  ; pixdata[3] ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[3]  ; pclk     ;
-; N/A   ; None         ; -6.665 ns  ; pixdata[3] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[3] ; pclk     ;
-; N/A   ; None         ; -6.973 ns  ; pixdata[5] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[5] ; pclk     ;
-; N/A   ; None         ; -7.192 ns  ; pixdata[7] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[7] ; pclk     ;
-; N/A   ; None         ; -7.231 ns  ; pixdata[6] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[6] ; pclk     ;
-; N/A   ; None         ; -7.485 ns  ; pixdata[2] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[2] ; pclk     ;
-; N/A   ; None         ; -7.485 ns  ; pixdata[2] ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[2]  ; pclk     ;
-+-------+--------------+------------+------------+-------------------------------------------------+----------+
++-----------------------------------------------------------------------------------------------------------+
+; tco                                                                                                       ;
++-------+--------------+------------+--------------------------------------------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From                                             ; To    ; From Clock ;
++-------+--------------+------------+--------------------------------------------------+-------+------------+
+; N/A   ; None         ; 15.817 ns  ; InputLayer:ILE|TimingManager:timemanager|line[0] ; TEST2 ; VSYNC      ;
+; N/A   ; None         ; 15.798 ns  ; InputLayer:ILE|TimingManager:timemanager|line[3] ; TEST2 ; VSYNC      ;
+; N/A   ; None         ; 15.568 ns  ; InputLayer:ILE|TimingManager:timemanager|line[6] ; TEST2 ; VSYNC      ;
+; N/A   ; None         ; 15.399 ns  ; InputLayer:ILE|TimingManager:timemanager|line[8] ; TEST2 ; VSYNC      ;
+; N/A   ; None         ; 15.237 ns  ; InputLayer:ILE|TimingManager:timemanager|line[7] ; TEST2 ; VSYNC      ;
+; N/A   ; None         ; 14.852 ns  ; InputLayer:ILE|TimingManager:timemanager|line[5] ; TEST2 ; VSYNC      ;
+; N/A   ; None         ; 14.844 ns  ; InputLayer:ILE|TimingManager:timemanager|line[2] ; TEST2 ; VSYNC      ;
+; N/A   ; None         ; 14.786 ns  ; InputLayer:ILE|TimingManager:timemanager|line[4] ; TEST2 ; VSYNC      ;
+; N/A   ; None         ; 14.621 ns  ; InputLayer:ILE|TimingManager:timemanager|line[1] ; TEST2 ; VSYNC      ;
+; N/A   ; None         ; 14.406 ns  ; TEST3~reg0                                       ; TEST3 ; pclk       ;
+; N/A   ; None         ; 12.289 ns  ; transmittr:transmitter|Endflg                    ; Serot ; Serck      ;
+; N/A   ; None         ; 12.110 ns  ; InputLayer:ILE|TimingManager:timemanager|Sig_En  ; enasg ; pclk       ;
+; N/A   ; None         ; 11.925 ns  ; transmittr:transmitter|Datareg[0]                ; Serot ; Serck      ;
+; N/A   ; None         ; 8.940 ns   ; clkdivider:clkdivider0|t_count[1]                ; xclk  ; clk        ;
++-------+--------------+------------+--------------------------------------------------+-------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; tco                                                                                                                ;
-+-------+--------------+------------+--------------------------------------------------+----------------+------------+
-; Slack ; Required tco ; Actual tco ; From                                             ; To             ; From Clock ;
-+-------+--------------+------------+--------------------------------------------------+----------------+------------+
-; N/A   ; None         ; 18.801 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[8]  ; PixParaBus[2]  ; pclk       ;
-; N/A   ; None         ; 18.742 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[5]  ; PixParaBus[4]  ; pclk       ;
-; N/A   ; None         ; 18.232 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[9]  ; PixParaBus[5]  ; pclk       ;
-; N/A   ; None         ; 17.834 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[4]  ; PixParaBus[1]  ; pclk       ;
-; N/A   ; None         ; 17.820 ns  ; TEST3~reg0                                       ; TEST3          ; pclk       ;
-; N/A   ; None         ; 17.758 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[6]  ; PixParaBus[7]  ; pclk       ;
-; N/A   ; None         ; 17.627 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[11] ; PixParaBus[11] ; pclk       ;
-; N/A   ; None         ; 17.625 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[2]  ; PixParaBus[6]  ; pclk       ;
-; N/A   ; None         ; 17.615 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[7]  ; PixParaBus[10] ; pclk       ;
-; N/A   ; None         ; 17.615 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[10] ; PixParaBus[8]  ; pclk       ;
-; N/A   ; None         ; 17.613 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[1]  ; PixParaBus[3]  ; pclk       ;
-; N/A   ; None         ; 16.526 ns  ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[3]  ; PixParaBus[9]  ; pclk       ;
-; N/A   ; None         ; 16.360 ns  ; InputLayer:ILE|TimingManager:timemanager|line[8] ; TEST2          ; VSYNC      ;
-; N/A   ; None         ; 16.309 ns  ; InputLayer:ILE|TimingManager:timemanager|line[5] ; TEST2          ; VSYNC      ;
-; N/A   ; None         ; 16.253 ns  ; InputLayer:ILE|TimingManager:timemanager|line[6] ; TEST2          ; VSYNC      ;
-; N/A   ; None         ; 15.830 ns  ; InputLayer:ILE|TimingManager:timemanager|line[7] ; TEST2          ; VSYNC      ;
-; N/A   ; None         ; 15.759 ns  ; InputLayer:ILE|TimingManager:timemanager|line[3] ; TEST2          ; VSYNC      ;
-; N/A   ; None         ; 15.603 ns  ; InputLayer:ILE|TimingManager:timemanager|line[1] ; TEST2          ; VSYNC      ;
-; N/A   ; None         ; 15.421 ns  ; InputLayer:ILE|TimingManager:timemanager|line[4] ; TEST2          ; VSYNC      ;
-; N/A   ; None         ; 15.066 ns  ; InputLayer:ILE|TimingManager:timemanager|line[2] ; TEST2          ; VSYNC      ;
-; N/A   ; None         ; 14.374 ns  ; clkdivider:clkdivider0|t_count[1]                ; xclk           ; clk        ;
-; N/A   ; None         ; 13.955 ns  ; InputLayer:ILE|TimingManager:timemanager|line[0] ; TEST2          ; VSYNC      ;
-; N/A   ; None         ; 12.712 ns  ; InputLayer:ILE|TimingManager:timemanager|Sig_En  ; enasg          ; pclk       ;
-; N/A   ; None         ; 12.049 ns  ; transmittr:transmitter|Endflg                    ; Serot          ; Serck      ;
-; N/A   ; None         ; 11.508 ns  ; transmittr:transmitter|Datareg[0]                ; Serot          ; Serck      ;
-+-------+--------------+------------+--------------------------------------------------+----------------+------------+
++---------------------------------------------------------------------+
+; tpd                                                                 ;
++-------+-------------------+-----------------+-------+---------------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From  ; To            ;
++-------+-------------------+-----------------+-------+---------------+
+; N/A   ; None              ; 9.934 ns        ; Serck ; Serot         ;
+; N/A   ; None              ; 7.269 ns        ; VSYNC ; PixParaBus[0] ;
+; N/A   ; None              ; 7.059 ns        ; VSYNC ; NVSYNCbg      ;
+; N/A   ; None              ; 4.901 ns        ; HREF  ; NREFbg        ;
++-------+-------------------+-----------------+-------+---------------+
 
 
-+--------------------------------------------------------------------------+
-; tpd                                                                      ;
-+-------+-------------------+-----------------+------------+---------------+
-; Slack ; Required P2P Time ; Actual P2P Time ; From       ; To            ;
-+-------+-------------------+-----------------+------------+---------------+
-; N/A   ; None              ; 9.289 ns        ; Serck      ; Serot         ;
-; N/A   ; None              ; 7.287 ns        ; VSYNC      ; PixParaBus[0] ;
-; N/A   ; None              ; 7.037 ns        ; VSYNC      ; NVSYNCbg      ;
-; N/A   ; None              ; 6.880 ns        ; pixdata[1] ; nData         ;
-; N/A   ; None              ; 4.908 ns        ; HREF       ; NREFbg        ;
-+-------+-------------------+-----------------+------------+---------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; th                                                                                                                ;
-+---------------+-------------+-----------+------------+-------------------------------------------------+----------+
-; Minimum Slack ; Required th ; Actual th ; From       ; To                                              ; To Clock ;
-+---------------+-------------+-----------+------------+-------------------------------------------------+----------+
-; N/A           ; None        ; 8.039 ns  ; pixdata[2] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[2] ; pclk     ;
-; N/A           ; None        ; 8.039 ns  ; pixdata[2] ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[2]  ; pclk     ;
-; N/A           ; None        ; 7.785 ns  ; pixdata[6] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[6] ; pclk     ;
-; N/A           ; None        ; 7.746 ns  ; pixdata[7] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[7] ; pclk     ;
-; N/A           ; None        ; 7.527 ns  ; pixdata[5] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[5] ; pclk     ;
-; N/A           ; None        ; 7.219 ns  ; pixdata[3] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[3] ; pclk     ;
-; N/A           ; None        ; 7.214 ns  ; pixdata[3] ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[3]  ; pclk     ;
-; N/A           ; None        ; 7.094 ns  ; pixdata[1] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[1] ; pclk     ;
-; N/A           ; None        ; 7.092 ns  ; pixdata[1] ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[1]  ; pclk     ;
-; N/A           ; None        ; 6.938 ns  ; pixdata[0] ; InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[0]  ; pclk     ;
-; N/A           ; None        ; 6.904 ns  ; pixdata[4] ; InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[4] ; pclk     ;
-; N/A           ; None        ; 2.769 ns  ; HREF       ; InputLayer:ILE|TimingManager:timemanager|Sig_En ; pclk     ;
-; N/A           ; None        ; 0.493 ns  ; VSYNC      ; transmittr:transmitter|Datareg[0]               ; Serck    ;
-; N/A           ; None        ; -1.591 ns ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; pclk     ;
-; N/A           ; None        ; -1.591 ns ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk     ;
-; N/A           ; None        ; -1.591 ns ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk     ;
-; N/A           ; None        ; -1.591 ns ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; pclk     ;
-; N/A           ; None        ; -1.591 ns ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk     ;
-; N/A           ; None        ; -1.591 ns ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk     ;
-; N/A           ; None        ; -1.591 ns ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; pclk     ;
-; N/A           ; None        ; -1.591 ns ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; pclk     ;
-; N/A           ; None        ; -1.591 ns ; HREF       ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; pclk     ;
-+---------------+-------------+-----------+------------+-------------------------------------------------+----------+
++--------------------------------------------------------------------------------------------------------------+
+; th                                                                                                           ;
++---------------+-------------+-----------+-------+-------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From  ; To                                              ; To Clock ;
++---------------+-------------+-----------+-------+-------------------------------------------------+----------+
+; N/A           ; None        ; 2.783 ns  ; HREF  ; InputLayer:ILE|TimingManager:timemanager|Sig_En ; pclk     ;
+; N/A           ; None        ; 0.865 ns  ; VSYNC ; transmittr:transmitter|Datareg[0]               ; Serck    ;
+; N/A           ; None        ; -1.004 ns ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[8] ; pclk     ;
+; N/A           ; None        ; -1.004 ns ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[0] ; pclk     ;
+; N/A           ; None        ; -1.004 ns ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[7] ; pclk     ;
+; N/A           ; None        ; -1.004 ns ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[4] ; pclk     ;
+; N/A           ; None        ; -1.004 ns ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[6] ; pclk     ;
+; N/A           ; None        ; -1.004 ns ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[5] ; pclk     ;
+; N/A           ; None        ; -1.004 ns ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[3] ; pclk     ;
+; N/A           ; None        ; -1.004 ns ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[2] ; pclk     ;
+; N/A           ; None        ; -1.004 ns ; HREF  ; InputLayer:ILE|TimingManager:timemanager|foo[1] ; pclk     ;
++---------------+-------------+-----------+-------+-------------------------------------------------+----------+
 
 
 +--------------------------+
@@ -394,130 +351,129 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 10.0 Build 218 06/27/2010 SJ Web Edition
-    Info: Processing started: Mon Feb 21 00:19:24 2011
+    Info: Processing started: Mon Feb 21 01:25:22 2011
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off ReShynth -c ReShynth
 Warning: Classic Timing Analyzer will not be available in a future release of the Quartus II software. Use the TimeQuest Timing Analyzer to run timing analysis on your design. Convert all the project settings and the timing constraints to TimeQuest Timing Analyzer equivalents.
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "Serck" is an undefined clock
-    Info: Assuming node "clk" is an undefined clock
     Info: Assuming node "pclk" is an undefined clock
+    Info: Assuming node "clk" is an undefined clock
     Info: Assuming node "VSYNC" is an undefined clock
 Warning: Found 2 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
-    Info: Detected ripple clock "InputLayer:ILE|TimingManager:timemanager|Sig_En" as buffer
     Info: Detected ripple clock "clkdivider:clkdivider0|t_count[0]" as buffer
-Info: Clock "Serck" has Internal fmax of 179.34 MHz between source register "transmittr:transmitter|ShftCount[1]" and destination register "transmittr:transmitter|ShftCount[2]" (period= 5.576 ns)
-    Info: + Longest register to register delay is 4.867 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X8_Y4_N0; Fanout = 3; REG Node = 'transmittr:transmitter|ShftCount[1]'
-        Info: 2: + IC(2.065 ns) + CELL(0.511 ns) = 2.576 ns; Loc. = LC_X8_Y5_N7; Fanout = 3; COMB Node = 'transmittr:transmitter|Add0~0'
-        Info: 3: + IC(1.700 ns) + CELL(0.591 ns) = 4.867 ns; Loc. = LC_X8_Y4_N1; Fanout = 4; REG Node = 'transmittr:transmitter|ShftCount[2]'
-        Info: Total cell delay = 1.102 ns ( 22.64 % )
-        Info: Total interconnect delay = 3.765 ns ( 77.36 % )
+    Info: Detected ripple clock "InputLayer:ILE|TimingManager:timemanager|Sig_En" as buffer
+Info: Clock "Serck" has Internal fmax of 170.82 MHz between source register "transmittr:transmitter|ShftCount[0]" and destination register "transmittr:transmitter|Datareg[0]" (period= 5.854 ns)
+    Info: + Longest register to register delay is 5.145 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X6_Y4_N4; Fanout = 6; REG Node = 'transmittr:transmitter|ShftCount[0]'
+        Info: 2: + IC(1.873 ns) + CELL(0.914 ns) = 2.787 ns; Loc. = LC_X5_Y4_N4; Fanout = 2; COMB Node = 'transmittr:transmitter|Equal0~0'
+        Info: 3: + IC(1.767 ns) + CELL(0.591 ns) = 5.145 ns; Loc. = LC_X5_Y4_N2; Fanout = 1; REG Node = 'transmittr:transmitter|Datareg[0]'
+        Info: Total cell delay = 1.505 ns ( 29.25 % )
+        Info: Total interconnect delay = 3.640 ns ( 70.75 % )
     Info: - Smallest clock skew is 0.000 ns
-        Info: + Shortest clock path from clock "Serck" to destination register is 5.919 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_47; Fanout = 18; CLK Node = 'Serck'
-            Info: 2: + IC(3.869 ns) + CELL(0.918 ns) = 5.919 ns; Loc. = LC_X8_Y4_N1; Fanout = 4; REG Node = 'transmittr:transmitter|ShftCount[2]'
-            Info: Total cell delay = 2.050 ns ( 34.63 % )
-            Info: Total interconnect delay = 3.869 ns ( 65.37 % )
-        Info: - Longest clock path from clock "Serck" to source register is 5.919 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_47; Fanout = 18; CLK Node = 'Serck'
-            Info: 2: + IC(3.869 ns) + CELL(0.918 ns) = 5.919 ns; Loc. = LC_X8_Y4_N0; Fanout = 3; REG Node = 'transmittr:transmitter|ShftCount[1]'
-            Info: Total cell delay = 2.050 ns ( 34.63 % )
-            Info: Total interconnect delay = 3.869 ns ( 65.37 % )
+        Info: + Shortest clock path from clock "Serck" to destination register is 5.898 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_47; Fanout = 17; CLK Node = 'Serck'
+            Info: 2: + IC(3.848 ns) + CELL(0.918 ns) = 5.898 ns; Loc. = LC_X5_Y4_N2; Fanout = 1; REG Node = 'transmittr:transmitter|Datareg[0]'
+            Info: Total cell delay = 2.050 ns ( 34.76 % )
+            Info: Total interconnect delay = 3.848 ns ( 65.24 % )
+        Info: - Longest clock path from clock "Serck" to source register is 5.898 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_47; Fanout = 17; CLK Node = 'Serck'
+            Info: 2: + IC(3.848 ns) + CELL(0.918 ns) = 5.898 ns; Loc. = LC_X6_Y4_N4; Fanout = 6; REG Node = 'transmittr:transmitter|ShftCount[0]'
+            Info: Total cell delay = 2.050 ns ( 34.76 % )
+            Info: Total interconnect delay = 3.848 ns ( 65.24 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Micro setup delay of destination is 0.333 ns
+Info: Clock "pclk" has Internal fmax of 136.02 MHz between source register "InputLayer:ILE|TimingManager:timemanager|foo[0]" and destination register "InputLayer:ILE|TimingManager:timemanager|foo[8]" (period= 7.352 ns)
+    Info: + Longest register to register delay is 6.643 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X3_Y4_N0; Fanout = 5; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]'
+        Info: 2: + IC(2.026 ns) + CELL(0.511 ns) = 2.537 ns; Loc. = LC_X3_Y5_N4; Fanout = 1; COMB Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]~4'
+        Info: 3: + IC(0.534 ns) + CELL(0.200 ns) = 3.271 ns; Loc. = LC_X3_Y5_N5; Fanout = 9; COMB Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]~5'
+        Info: 4: + IC(1.612 ns) + CELL(1.760 ns) = 6.643 ns; Loc. = LC_X3_Y4_N8; Fanout = 3; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[8]'
+        Info: Total cell delay = 2.471 ns ( 37.20 % )
+        Info: Total interconnect delay = 4.172 ns ( 62.80 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "pclk" to destination register is 7.487 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_8; Fanout = 10; CLK Node = 'pclk'
+            Info: 2: + IC(5.437 ns) + CELL(0.918 ns) = 7.487 ns; Loc. = LC_X3_Y4_N8; Fanout = 3; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[8]'
+            Info: Total cell delay = 2.050 ns ( 27.38 % )
+            Info: Total interconnect delay = 5.437 ns ( 72.62 % )
+        Info: - Longest clock path from clock "pclk" to source register is 7.487 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_8; Fanout = 10; CLK Node = 'pclk'
+            Info: 2: + IC(5.437 ns) + CELL(0.918 ns) = 7.487 ns; Loc. = LC_X3_Y4_N0; Fanout = 5; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]'
+            Info: Total cell delay = 2.050 ns ( 27.38 % )
+            Info: Total interconnect delay = 5.437 ns ( 72.62 % )
     Info: + Micro clock to output delay of source is 0.376 ns
     Info: + Micro setup delay of destination is 0.333 ns
 Info: Clock "clk" Internal fmax is restricted to 304.04 MHz between source register "clkdivider:clkdivider0|t_count[0]" and destination register "clkdivider:clkdivider0|t_count[0]"
     Info: fmax restricted to clock pin edge rate 3.289 ns. Expand message to see actual delay path.
-        Info: + Longest register to register delay is 1.511 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X12_Y4_N2; Fanout = 2; REG Node = 'clkdivider:clkdivider0|t_count[0]'
-            Info: 2: + IC(0.920 ns) + CELL(0.591 ns) = 1.511 ns; Loc. = LC_X12_Y4_N2; Fanout = 2; REG Node = 'clkdivider:clkdivider0|t_count[0]'
-            Info: Total cell delay = 0.591 ns ( 39.11 % )
-            Info: Total interconnect delay = 0.920 ns ( 60.89 % )
+        Info: + Longest register to register delay is 1.502 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X1_Y5_N2; Fanout = 2; REG Node = 'clkdivider:clkdivider0|t_count[0]'
+            Info: 2: + IC(0.911 ns) + CELL(0.591 ns) = 1.502 ns; Loc. = LC_X1_Y5_N2; Fanout = 2; REG Node = 'clkdivider:clkdivider0|t_count[0]'
+            Info: Total cell delay = 0.591 ns ( 39.35 % )
+            Info: Total interconnect delay = 0.911 ns ( 60.65 % )
         Info: - Smallest clock skew is 0.000 ns
-            Info: + Shortest clock path from clock "clk" to destination register is 5.556 ns
+            Info: + Shortest clock path from clock "clk" to destination register is 3.302 ns
                 Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 1; CLK Node = 'clk'
-                Info: 2: + IC(3.475 ns) + CELL(0.918 ns) = 5.556 ns; Loc. = LC_X12_Y4_N2; Fanout = 2; REG Node = 'clkdivider:clkdivider0|t_count[0]'
-                Info: Total cell delay = 2.081 ns ( 37.46 % )
-                Info: Total interconnect delay = 3.475 ns ( 62.54 % )
-            Info: - Longest clock path from clock "clk" to source register is 5.556 ns
+                Info: 2: + IC(1.221 ns) + CELL(0.918 ns) = 3.302 ns; Loc. = LC_X1_Y5_N2; Fanout = 2; REG Node = 'clkdivider:clkdivider0|t_count[0]'
+                Info: Total cell delay = 2.081 ns ( 63.02 % )
+                Info: Total interconnect delay = 1.221 ns ( 36.98 % )
+            Info: - Longest clock path from clock "clk" to source register is 3.302 ns
                 Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 1; CLK Node = 'clk'
-                Info: 2: + IC(3.475 ns) + CELL(0.918 ns) = 5.556 ns; Loc. = LC_X12_Y4_N2; Fanout = 2; REG Node = 'clkdivider:clkdivider0|t_count[0]'
-                Info: Total cell delay = 2.081 ns ( 37.46 % )
-                Info: Total interconnect delay = 3.475 ns ( 62.54 % )
+                Info: 2: + IC(1.221 ns) + CELL(0.918 ns) = 3.302 ns; Loc. = LC_X1_Y5_N2; Fanout = 2; REG Node = 'clkdivider:clkdivider0|t_count[0]'
+                Info: Total cell delay = 2.081 ns ( 63.02 % )
+                Info: Total interconnect delay = 1.221 ns ( 36.98 % )
         Info: + Micro clock to output delay of source is 0.376 ns
         Info: + Micro setup delay of destination is 0.333 ns
-Info: Clock "pclk" has Internal fmax of 114.13 MHz between source register "InputLayer:ILE|TimingManager:timemanager|foo[8]" and destination register "InputLayer:ILE|TimingManager:timemanager|foo[0]" (period= 8.762 ns)
-    Info: + Longest register to register delay is 8.053 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X4_Y4_N8; Fanout = 3; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[8]'
-        Info: 2: + IC(2.663 ns) + CELL(0.511 ns) = 3.174 ns; Loc. = LC_X7_Y5_N0; Fanout = 1; COMB Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]~4'
-        Info: 3: + IC(2.240 ns) + CELL(0.200 ns) = 5.614 ns; Loc. = LC_X4_Y4_N9; Fanout = 9; COMB Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]~5'
-        Info: 4: + IC(0.679 ns) + CELL(1.760 ns) = 8.053 ns; Loc. = LC_X4_Y4_N0; Fanout = 5; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]'
-        Info: Total cell delay = 2.471 ns ( 30.68 % )
-        Info: Total interconnect delay = 5.582 ns ( 69.32 % )
-    Info: - Smallest clock skew is 0.000 ns
-        Info: + Shortest clock path from clock "pclk" to destination register is 7.508 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_8; Fanout = 10; CLK Node = 'pclk'
-            Info: 2: + IC(5.458 ns) + CELL(0.918 ns) = 7.508 ns; Loc. = LC_X4_Y4_N0; Fanout = 5; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]'
-            Info: Total cell delay = 2.050 ns ( 27.30 % )
-            Info: Total interconnect delay = 5.458 ns ( 72.70 % )
-        Info: - Longest clock path from clock "pclk" to source register is 7.508 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_8; Fanout = 10; CLK Node = 'pclk'
-            Info: 2: + IC(5.458 ns) + CELL(0.918 ns) = 7.508 ns; Loc. = LC_X4_Y4_N8; Fanout = 3; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[8]'
-            Info: Total cell delay = 2.050 ns ( 27.30 % )
-            Info: Total interconnect delay = 5.458 ns ( 72.70 % )
-    Info: + Micro clock to output delay of source is 0.376 ns
-    Info: + Micro setup delay of destination is 0.333 ns
 Info: No valid register-to-register data paths exist for clock "VSYNC"
-Info: tsu for register "InputLayer:ILE|TimingManager:timemanager|foo[0]" (data pin = "HREF", clock pin = "pclk") is 2.145 ns
-    Info: + Longest pin to register delay is 9.320 ns
+Info: tsu for register "InputLayer:ILE|TimingManager:timemanager|foo[8]" (data pin = "HREF", clock pin = "pclk") is 1.558 ns
+    Info: + Longest pin to register delay is 8.712 ns
         Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_4; Fanout = 12; PIN Node = 'HREF'
-        Info: 2: + IC(3.109 ns) + CELL(0.200 ns) = 4.441 ns; Loc. = LC_X7_Y5_N0; Fanout = 1; COMB Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]~4'
-        Info: 3: + IC(2.240 ns) + CELL(0.200 ns) = 6.881 ns; Loc. = LC_X4_Y4_N9; Fanout = 9; COMB Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]~5'
-        Info: 4: + IC(0.679 ns) + CELL(1.760 ns) = 9.320 ns; Loc. = LC_X4_Y4_N0; Fanout = 5; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]'
-        Info: Total cell delay = 3.292 ns ( 35.32 % )
-        Info: Total interconnect delay = 6.028 ns ( 64.68 % )
+        Info: 2: + IC(2.734 ns) + CELL(0.740 ns) = 4.606 ns; Loc. = LC_X3_Y5_N4; Fanout = 1; COMB Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]~4'
+        Info: 3: + IC(0.534 ns) + CELL(0.200 ns) = 5.340 ns; Loc. = LC_X3_Y5_N5; Fanout = 9; COMB Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]~5'
+        Info: 4: + IC(1.612 ns) + CELL(1.760 ns) = 8.712 ns; Loc. = LC_X3_Y4_N8; Fanout = 3; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[8]'
+        Info: Total cell delay = 3.832 ns ( 43.99 % )
+        Info: Total interconnect delay = 4.880 ns ( 56.01 % )
     Info: + Micro setup delay of destination is 0.333 ns
-    Info: - Shortest clock path from clock "pclk" to destination register is 7.508 ns
+    Info: - Shortest clock path from clock "pclk" to destination register is 7.487 ns
         Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_8; Fanout = 10; CLK Node = 'pclk'
-        Info: 2: + IC(5.458 ns) + CELL(0.918 ns) = 7.508 ns; Loc. = LC_X4_Y4_N0; Fanout = 5; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[0]'
-        Info: Total cell delay = 2.050 ns ( 27.30 % )
-        Info: Total interconnect delay = 5.458 ns ( 72.70 % )
-Info: tco from clock "pclk" to destination pin "PixParaBus[2]" through register "InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[8]" is 18.801 ns
-    Info: + Longest clock path from clock "pclk" to source register is 13.060 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_8; Fanout = 10; CLK Node = 'pclk'
-        Info: 2: + IC(5.458 ns) + CELL(1.294 ns) = 7.884 ns; Loc. = LC_X7_Y5_N3; Fanout = 19; REG Node = 'InputLayer:ILE|TimingManager:timemanager|Sig_En'
-        Info: 3: + IC(4.258 ns) + CELL(0.918 ns) = 13.060 ns; Loc. = LC_X1_Y7_N6; Fanout = 2; REG Node = 'InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[8]'
-        Info: Total cell delay = 3.344 ns ( 25.60 % )
-        Info: Total interconnect delay = 9.716 ns ( 74.40 % )
+        Info: 2: + IC(5.437 ns) + CELL(0.918 ns) = 7.487 ns; Loc. = LC_X3_Y4_N8; Fanout = 3; REG Node = 'InputLayer:ILE|TimingManager:timemanager|foo[8]'
+        Info: Total cell delay = 2.050 ns ( 27.38 % )
+        Info: Total interconnect delay = 5.437 ns ( 72.62 % )
+Info: tco from clock "VSYNC" to destination pin "TEST2" through register "InputLayer:ILE|TimingManager:timemanager|line[0]" is 15.817 ns
+    Info: + Longest clock path from clock "VSYNC" to source register is 7.438 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_6; Fanout = 12; CLK Node = 'VSYNC'
+        Info: 2: + IC(5.388 ns) + CELL(0.918 ns) = 7.438 ns; Loc. = LC_X9_Y7_N8; Fanout = 6; REG Node = 'InputLayer:ILE|TimingManager:timemanager|line[0]'
+        Info: Total cell delay = 2.050 ns ( 27.56 % )
+        Info: Total interconnect delay = 5.388 ns ( 72.44 % )
     Info: + Micro clock to output delay of source is 0.376 ns
-    Info: + Longest register to pin delay is 5.365 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X1_Y7_N6; Fanout = 2; REG Node = 'InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[8]'
-        Info: 2: + IC(3.043 ns) + CELL(2.322 ns) = 5.365 ns; Loc. = PIN_75; Fanout = 0; PIN Node = 'PixParaBus[2]'
-        Info: Total cell delay = 2.322 ns ( 43.28 % )
-        Info: Total interconnect delay = 3.043 ns ( 56.72 % )
-Info: Longest tpd from source pin "Serck" to destination pin "Serot" is 9.289 ns
-    Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_47; Fanout = 18; CLK Node = 'Serck'
-    Info: 2: + IC(3.540 ns) + CELL(0.511 ns) = 5.183 ns; Loc. = LC_X8_Y5_N5; Fanout = 1; COMB Node = 'transmittr:transmitter|SrialData~0'
-    Info: 3: + IC(1.784 ns) + CELL(2.322 ns) = 9.289 ns; Loc. = PIN_44; Fanout = 0; PIN Node = 'Serot'
-    Info: Total cell delay = 3.965 ns ( 42.68 % )
-    Info: Total interconnect delay = 5.324 ns ( 57.32 % )
-Info: th for register "InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[2]" (data pin = "pixdata[2]", clock pin = "pclk") is 8.039 ns
-    Info: + Longest clock path from clock "pclk" to destination register is 13.060 ns
+    Info: + Longest register to pin delay is 8.003 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X9_Y7_N8; Fanout = 6; REG Node = 'InputLayer:ILE|TimingManager:timemanager|line[0]'
+        Info: 2: + IC(2.603 ns) + CELL(0.740 ns) = 3.343 ns; Loc. = LC_X7_Y5_N8; Fanout = 1; COMB Node = 'InputLayer:ILE|TimingManager:timemanager|Equal0~2'
+        Info: 3: + IC(2.338 ns) + CELL(2.322 ns) = 8.003 ns; Loc. = PIN_16; Fanout = 0; PIN Node = 'TEST2'
+        Info: Total cell delay = 3.062 ns ( 38.26 % )
+        Info: Total interconnect delay = 4.941 ns ( 61.74 % )
+Info: Longest tpd from source pin "Serck" to destination pin "Serot" is 9.934 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_47; Fanout = 17; CLK Node = 'Serck'
+    Info: 2: + IC(3.505 ns) + CELL(0.740 ns) = 5.377 ns; Loc. = LC_X5_Y4_N1; Fanout = 1; COMB Node = 'transmittr:transmitter|SrialData~0'
+    Info: 3: + IC(2.235 ns) + CELL(2.322 ns) = 9.934 ns; Loc. = PIN_44; Fanout = 0; PIN Node = 'Serot'
+    Info: Total cell delay = 4.194 ns ( 42.22 % )
+    Info: Total interconnect delay = 5.740 ns ( 57.78 % )
+Info: th for register "InputLayer:ILE|TimingManager:timemanager|Sig_En" (data pin = "HREF", clock pin = "pclk") is 2.783 ns
+    Info: + Longest clock path from clock "pclk" to destination register is 7.487 ns
         Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_8; Fanout = 10; CLK Node = 'pclk'
-        Info: 2: + IC(5.458 ns) + CELL(1.294 ns) = 7.884 ns; Loc. = LC_X7_Y5_N3; Fanout = 19; REG Node = 'InputLayer:ILE|TimingManager:timemanager|Sig_En'
-        Info: 3: + IC(4.258 ns) + CELL(0.918 ns) = 13.060 ns; Loc. = LC_X7_Y7_N5; Fanout = 2; REG Node = 'InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[2]'
-        Info: Total cell delay = 3.344 ns ( 25.60 % )
-        Info: Total interconnect delay = 9.716 ns ( 74.40 % )
+        Info: 2: + IC(5.437 ns) + CELL(0.918 ns) = 7.487 ns; Loc. = LC_X3_Y5_N2; Fanout = 4; REG Node = 'InputLayer:ILE|TimingManager:timemanager|Sig_En'
+        Info: Total cell delay = 2.050 ns ( 27.38 % )
+        Info: Total interconnect delay = 5.437 ns ( 72.62 % )
     Info: + Micro hold delay of destination is 0.221 ns
-    Info: - Shortest pin to register delay is 5.242 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_86; Fanout = 2; PIN Node = 'pixdata[2]'
-        Info: 2: + IC(3.830 ns) + CELL(0.280 ns) = 5.242 ns; Loc. = LC_X7_Y7_N5; Fanout = 2; REG Node = 'InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[2]'
-        Info: Total cell delay = 1.412 ns ( 26.94 % )
-        Info: Total interconnect delay = 3.830 ns ( 73.06 % )
+    Info: - Shortest pin to register delay is 4.925 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_4; Fanout = 12; PIN Node = 'HREF'
+        Info: 2: + IC(2.732 ns) + CELL(1.061 ns) = 4.925 ns; Loc. = LC_X3_Y5_N2; Fanout = 4; REG Node = 'InputLayer:ILE|TimingManager:timemanager|Sig_En'
+        Info: Total cell delay = 2.193 ns ( 44.53 % )
+        Info: Total interconnect delay = 2.732 ns ( 55.47 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 185 megabytes
-    Info: Processing ended: Mon Feb 21 00:19:25 2011
+    Info: Peak virtual memory: 184 megabytes
+    Info: Processing ended: Mon Feb 21 01:25:23 2011
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

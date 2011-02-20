@@ -11,7 +11,6 @@ entity ReShynth is
         pixdata         : in     vl_logic_vector(7 downto 0);
         xclk            : out    vl_logic;
         PixParaBus      : out    vl_logic_vector(11 downto 0);
-        PixPararegbg    : out    vl_logic_vector(11 downto 0);
         enasg           : out    vl_logic;
         TEST2           : out    vl_logic;
         TEST3           : out    vl_logic;

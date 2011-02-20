@@ -19,7 +19,7 @@ module ReShynth (
 	input		Serck,
 //	output	Serctl,
 	output	Serot,
-	input 	[7:0]pixdata,
+//	input 	[7:0]pixdata,
 	output 	xclk,
 	output	[11:0]PixParaBus,
 	output enasg,
@@ -38,7 +38,8 @@ module ReShynth (
 wire Wrtcmplt;
 assign NREFbg = ~HREF;
 assign NVSYNCbg = ~VSYNC;
-
+wire [7:0]pixdata;
+assign pixdata = 8'he0;
 //assign Serctl = | {Remp, Gemp, Bemp};
 always @(posedge enasg)TEST3 <= ~TEST3;
 assign nData = ~ pixdata[1];

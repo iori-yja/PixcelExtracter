@@ -5,7 +5,7 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 2.145 ns
+Actual Time    : 1.558 ns
 From           : HREF
 To             : InputLayer:ILE|TimingManager:timemanager|foo[1]
 From Clock     : --
@@ -15,17 +15,17 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 18.801 ns
-From           : InputLayer:ILE|Dtacutcmmit:DataCommit|popdta[8]
-To             : PixParaBus[2]
-From Clock     : pclk
+Actual Time    : 15.817 ns
+From           : InputLayer:ILE|TimingManager:timemanager|line[0]
+To             : TEST2
+From Clock     : VSYNC
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 9.289 ns
+Actual Time    : 9.934 ns
 From           : Serck
 To             : Serot
 From Clock     : --
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 8.039 ns
-From           : pixdata[2]
-To             : InputLayer:ILE|Dtacutcmmit:DataCommit|redpx[2]
+Actual Time    : 2.783 ns
+From           : HREF
+To             : InputLayer:ILE|TimingManager:timemanager|Sig_En
 From Clock     : --
 To Clock       : pclk
 Failed Paths   : 0
@@ -45,8 +45,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'pclk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 114.13 MHz ( period = 8.762 ns )
-From           : InputLayer:ILE|TimingManager:timemanager|foo[8]
+Actual Time    : 136.02 MHz ( period = 7.352 ns )
+From           : InputLayer:ILE|TimingManager:timemanager|foo[0]
 To             : InputLayer:ILE|TimingManager:timemanager|foo[1]
 From Clock     : pclk
 To Clock       : pclk
@@ -55,9 +55,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'Serck'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 179.34 MHz ( period = 5.576 ns )
-From           : transmittr:transmitter|ShftCount[1]
-To             : transmittr:transmitter|ShftCount[2]
+Actual Time    : 170.82 MHz ( period = 5.854 ns )
+From           : transmittr:transmitter|ShftCount[0]
+To             : transmittr:transmitter|Datareg[0]
 From Clock     : Serck
 To Clock       : Serck
 Failed Paths   : 0

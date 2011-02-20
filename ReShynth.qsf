@@ -59,14 +59,6 @@ set_location_assignment PIN_6 -to VSYNC
 set_location_assignment PIN_8 -to pclk
 set_location_assignment PIN_14 -to xclk
 set_location_assignment PIN_12 -to clk
-set_location_assignment PIN_100 -to pixdata[7]
-set_location_assignment PIN_98 -to pixdata[6]
-set_location_assignment PIN_96 -to pixdata[5]
-set_location_assignment PIN_92 -to pixdata[4]
-set_location_assignment PIN_89 -to pixdata[3]
-set_location_assignment PIN_86 -to pixdata[2]
-set_location_assignment PIN_84 -to pixdata[1]
-set_location_assignment PIN_82 -to pixdata[0]
 set_location_assignment PIN_99 -to PixParaBus[11]
 set_location_assignment PIN_97 -to PixParaBus[10]
 set_location_assignment PIN_95 -to PixParaBus[9]
