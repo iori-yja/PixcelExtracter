@@ -1,0 +1,36 @@
+{D:/Documents and Settings/Ior/Desktop/GTS-SS/TESTBENCH.v} {1 {vlog -work work -nocovercells {D:/Documents and Settings/Ior/Desktop/GTS-SS/TESTBENCH.v}
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module TEST
+
+Top level modules:
+	TEST
+
+} {} {}} {D:/Documents and Settings/Ior/Desktop/GTS-SS/NewBufctrl.v} {1 {vlog -work work -nocovercells {D:/Documents and Settings/Ior/Desktop/GTS-SS/NewBufctrl.v}
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module TimingManager
+-- Compiling module Dtacutcmmit
+-- Compiling module InputLayer
+
+Top level modules:
+	InputLayer
+
+} {} {}} {D:/Documents and Settings/Ior/Desktop/GTS-SS/ugly.v} {1 {vlog -work work -nocovercells {D:/Documents and Settings/Ior/Desktop/GTS-SS/ugly.v}
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module Sendbridge
+-- Compiling module InputsideQueueArray
+-- Compiling module OutputBulkSerialDriver
+
+Top level modules:
+	Sendbridge
+	InputsideQueueArray
+	OutputBulkSerialDriver
+
+} {} {}} {D:/Documents and Settings/Ior/Desktop/GTS-SS/Verilog1.v} {1 {vlog -work work -nocovercells {D:/Documents and Settings/Ior/Desktop/GTS-SS/Verilog1.v}
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module clkdivider
+-- Compiling module ReShynth
+
+Top level modules:
+	ReShynth
+
+} {} {}}

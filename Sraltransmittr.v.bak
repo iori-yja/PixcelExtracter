@@ -1,0 +1,38 @@
+module transmittr (
+	input Srialclk,
+	input Wrtcmplt,
+	input [11:0]data,
+	output SrialData
+);
+assign Endtoken = Endflg & ~Srialclk;
+reg [11:0]Datareg;
+reg Endflg;
+wire Endtoken;
+assign SrialData = Endtoken ? ~Datareg[0] : Datareg[0];
+reg  [3:0]ShftCount = 0;
+	always@( posedge Srialclk )begin
+		if(Srialclk)begin
+			if ( ShftCount == 4'hC )begin
+				if( Wrtcmplt )begin
+//					Endtoken <= 0;
+					Endflg <= 0;
+					ShftCount <= 0;
+					Datareg[11:0] <= data[11:0];
+					end
+				end
+			else begin
+				Datareg[11:0] <= { 1'b0, Datareg[11:1] };
+				ShftCount <= ShftCount + 4'h1;
+				if ( ShftCount == 4'hB )begin
+					Endflg <= 1'b1;
+					end
+				end
+			end
+/*		else if(~Srialclk) begin
+			if(Endflg)begin
+				Endtoken <= 1'b1;
+				end
+			end*/
+		end
+
+endmodule

@@ -1,0 +1,12 @@
+PowerPlay Power Analyzer Status : Successful - Thu Jan 27 17:01:02 2011
+Quartus II Version : 10.0 Build 218 06/27/2010 SJ Web Edition
+Revision Name : ReShynth
+Top-level Entity Name : ReShynth
+Family : MAX II
+Device : EPM570T100C5
+Power Models : Final
+Total Thermal Power Dissipation : 46.24 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 39.61 mW
+I/O Thermal Power Dissipation : 6.63 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

@@ -1,0 +1,89 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'pclk'
+Slack : -7.159
+TNS   : -68.759
+
+Type  : Setup 'Serck'
+Slack : -4.682
+TNS   : -64.154
+
+Type  : Setup 'cnnegensgbg[0]'
+Slack : -3.411
+TNS   : -26.415
+
+Type  : Setup 'InputLayer:ILE|TimingManager:timemanager|Sig_En'
+Slack : -3.251
+TNS   : -28.738
+
+Type  : Setup 'clkdivider:clkdivider0|t_count[0]'
+Slack : -1.194
+TNS   : -1.194
+
+Type  : Setup 'clk'
+Slack : 4.216
+TNS   : 0.000
+
+Type  : Hold 'clk'
+Slack : -4.270
+TNS   : -4.270
+
+Type  : Hold 'Serck'
+Slack : -3.261
+TNS   : -8.297
+
+Type  : Hold 'cnnegensgbg[0]'
+Slack : -2.281
+TNS   : -21.044
+
+Type  : Hold 'InputLayer:ILE|TimingManager:timemanager|Sig_En'
+Slack : -2.130
+TNS   : -7.664
+
+Type  : Hold 'clkdivider:clkdivider0|t_count[0]'
+Slack : 1.640
+TNS   : 0.000
+
+Type  : Hold 'pclk'
+Slack : 2.033
+TNS   : 0.000
+
+Type  : Recovery 'VSYNC'
+Slack : -7.000
+TNS   : -52.220
+
+Type  : Removal 'VSYNC'
+Slack : 3.402
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Serck'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'VSYNC'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'pclk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'InputLayer:ILE|TimingManager:timemanager|Sig_En'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clkdivider:clkdivider0|t_count[0]'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'cnnegensgbg[0]'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

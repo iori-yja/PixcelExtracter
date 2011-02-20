@@ -1,0 +1,173 @@
+m255
+K3
+13
+cModel Technology
+dD:\altera\10.0sp1\Modelsim
+vclkdivider
+!s100 =Z9e<H>G0fI^6cD8I>d<l3
+I[jbBk1?LUdF5?jMzBzNi[3
+V1zYkLV;gc1i_NbSfSmkJm3
+Z0 d/home/ioriveur/GTS-SS
+Z1 w1295702344
+Z2 8/home/ioriveur/GTS-SS/Verilog1.v
+Z3 F/home/ioriveur/GTS-SS/Verilog1.v
+L0 5
+Z4 OV;L;6.5e;42
+r1
+!s85 0
+31
+!s101 -O0
+Z5 !s102 -nocovercells
+Z6 o-work work -nocovercells -O0
+vDtacutcmmit
+ISD?46`^a[zfKNT>:VU4[I3
+Vf14WFF8Omfz^feZSG:HI[2
+Z7 d/home/ioriveur/GTS-SS
+R1
+Z8 8/home/ioriveur/GTS-SS/NewBufctrl.v
+Z9 F/home/ioriveur/GTS-SS/NewBufctrl.v
+L0 45
+R4
+r1
+31
+R5
+R6
+n@dtacutcmmit
+!s100 DW4`2HQKRQ6hO9GeV@<ml0
+!s85 0
+!s101 -O0
+vInputLayer
+Ic?:oY`OdF7T^TODK9[dd11
+VQG:GmhgaONjchj7TA:]Th3
+R7
+R1
+R8
+R9
+L0 114
+R4
+r1
+31
+R5
+R6
+n@input@layer
+!s100 29fQ`z4Cm5;4[SkzT9m=G0
+!s85 0
+!s101 -O0
+vInputsideQueueArray
+I:P2Dcc4:OKk=h55D>WHc:2
+VA>TcT<e:1l]S]a?9K@0mB3
+Z10 dD:\Documents and Settings\Ior\Desktop\GTS-SS
+Z11 w1294326206
+Z12 8D:/Documents and Settings/Ior/Desktop/GTS-SS/ugly.v
+Z13 FD:/Documents and Settings/Ior/Desktop/GTS-SS/ugly.v
+L0 14
+R4
+r1
+31
+R5
+R6
+n@inputside@queue@array
+!s100 I8ZM@N?RW[QC>3BBK9jj<2
+!s85 0
+!s101 -O0
+vOutputBulkSerialDriver
+ING5GoziXNzTC4f>m2<P><3
+V^ZUZ;X3>cC`D0T8bM9c653
+R10
+R11
+R12
+R13
+L0 73
+R4
+r1
+31
+R5
+R6
+n@output@bulk@serial@driver
+!s100 HaJ9k>^kV@ARD?841J5^`0
+!s85 0
+!s101 -O0
+vReShynth
+!s100 c`amj7fPLcimUDT;n7;6F3
+IjG;lU:]WXZ1;L1eZK6i>e3
+VREQN0j_C5nFC:`HHn><VV3
+R7
+R1
+R2
+R3
+L0 14
+R4
+r1
+!s85 0
+31
+!s101 -O0
+R5
+R6
+n@re@shynth
+vSendbridge
+Id[B>m3@oI[EK[=Gk1mZ>K1
+Vm]aXQS4Af^XoF_E5d@IVG2
+R10
+R11
+R12
+R13
+L0 3
+R4
+r1
+31
+R5
+R6
+n@sendbridge
+!s100 CR4bK_h3V1IL05[X@jZWz3
+!s85 0
+!s101 -O0
+vTEST
+I=UmMRZ5`I2]Y3a6AeY>Fm3
+VbIW=:K5z]3n<z[T1F6BzC2
+R7
+w1295783533
+8/home/ioriveur/GTS-SS/TESTBENCH.v
+F/home/ioriveur/GTS-SS/TESTBENCH.v
+L0 2
+R4
+r1
+31
+R5
+R6
+n@t@e@s@t
+!s100 To3H8WD<PVmS;XZZFn0<c1
+!s85 0
+!s101 -O0
+vTimingManager
+Ijb[BhNb=NEPRUgGGSnI9B2
+V<0^aO^GaMQ;KQzVRnlN:`2
+R7
+R1
+R8
+R9
+L0 2
+R4
+r1
+31
+R5
+R6
+n@timing@manager
+!s100 J=IG=DZi1zZ]Wd_`hjM?32
+!s85 0
+!s101 -O0
+vtransmittr
+I5VfkeGDFamQi9=9=oCXbk2
+ViK47^8FTZFMJ<_[WCAoJT0
+R7
+R1
+8/home/ioriveur/GTS-SS/Sraltransmittr.v
+F/home/ioriveur/GTS-SS/Sraltransmittr.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!s100 IHE<WFN4lW8lXmGablRRV0
+!s85 0
+!s101 -O0
